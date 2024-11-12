@@ -13,7 +13,7 @@ const Nav1 = () => {
 
 
     return (
-        <div className="flex items-center justify-around">
+        <div className="flex items-center justify-between">
             <div>
                 <Logo></Logo>
             </div>
@@ -25,7 +25,7 @@ const Nav1 = () => {
                         <h1 className="">{selectedValue}</h1>
                         <TfiAngleDown className={`${isOpen ? '-rotate-180' : 'rotate-0'} duration-300`} />
                     </div>
-                    <div className={`${isOpen ? 'opacity-100' : 'opacity-0'} absolute max-h-48 overflow-y-auto w-56 py-2 border duration-300 z-10`}>
+                    <div className={`${isOpen ? 'visible opacity-100' : 'invisible opacity-0'} absolute max-h-48 overflow-y-auto w-56 py-2 border duration-300 z-10 bg-white`}>
                         {allDistricts.map(district => (
                             <div key={district} onClick={(e) => { setSelectedValue(e.target.textContent); setIsOpen(false); }} className="px-6 py-2 hover:text-[var(--secondary-color)]">
                                 {district}
