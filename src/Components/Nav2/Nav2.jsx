@@ -4,12 +4,25 @@ import { TfiAngleDown } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import InfoPages from "./InfoPages/InfoPages";
 import ShopNav from "./Shop/ShopNav";
-
-
+import { useEffect } from "react";
+import './nav2.css'
 
 const Nav2 = () => {
+    
+    useEffect(() => {
+        const navbar = document.querySelector('.navbar');
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        })
+    }, []);
+
+
     return (
-        <div className="w-full bg-[var(--secondary-color)] fixed mx-auto left-0 top-24 z-10 text-white">
+        <div className="navbar w-full mx-auto z-10 fixed left-0 top-24 bg-[var(--secondary-color)] text-white">
             <div className="max-w-screen-xl mx-auto px-8 py-3 flex justify-between">
                 <div>
                     <ul className="flex items-center gap-16 font-medium">

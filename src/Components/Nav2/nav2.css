@@ -1,0 +1,7 @@
+.navbar {
+    transition: top 0.2s ease;
+}
+
+.navbar.scrolled {
+    top: 0; 
+}

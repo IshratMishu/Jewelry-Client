@@ -10,7 +10,6 @@ import img3 from '../../assets/jewelry3.png';
 import './swiper-slide.css';
 import Button from "../Button/Button";
 
-
 const Banner = () => {
     return (
         <div className="flex items-center justify-between mt-24">
