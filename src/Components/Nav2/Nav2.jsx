@@ -1,24 +1,38 @@
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import { MdOutlineManageAccounts } from "react-icons/md";
 import { TfiAngleDown } from "react-icons/tfi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import InfoPages from "./InfoPages/InfoPages";
 import ShopNav from "./Shop/ShopNav";
 import { useEffect } from "react";
 import './nav2.css'
 
 const Nav2 = () => {
-    
+    const location = useLocation();
+
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
-        document.addEventListener('scroll', () => {
+
+        const scrollBehavior = () => {
             if (window.scrollY > 0) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
-        })
-    }, []);
+        }
+
+        if (location.pathname === '/') {
+            navbar.classList.remove('scrolled');
+            document.addEventListener('scroll', scrollBehavior);
+        } else {
+            navbar.classList.add('scrolled');
+        }
+
+        return () => {
+            document.removeEventListener('scroll', scrollBehavior);
+        }
+
+    }, [location]);
 
 
     return (

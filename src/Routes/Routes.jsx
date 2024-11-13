@@ -3,13 +3,15 @@ import {
 } from "react-router-dom";
 import Root from "../Root/Root";
 import Home from "../Pages/Home/Home";
-
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import AboutUs from "../Pages/AboutUs/AboutUs";
+import ContactUs from '../Pages/ContactUs/Contact'
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    //   errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -27,10 +29,14 @@ export const router = createBrowserRouter([
       //   path: "/login",
       //   element: <Login></Login>
       // },
-      // {
-      //   path: "/signUp",
-      //   element: <SignUp></SignUp>
-      // },
+      {
+        path: "/about",
+        element: <AboutUs></AboutUs>
+      },
+      {
+        path: "/contact",
+        element: <ContactUs></ContactUs>
+      },
     ],
   },
 ],

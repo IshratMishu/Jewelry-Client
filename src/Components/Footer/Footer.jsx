@@ -11,7 +11,8 @@ import amazon from '../../assets/amazon.png';
 import { GrSend } from "react-icons/gr";
 const Footer = () => {
     return (
-        <div className="mt-28 py-8">
+        <div className="mt-28">
+            <hr className="py-6" />
             <div className="flex items-center justify-between">
                 <div className="space-y-4">
                     <Logo></Logo>
@@ -77,9 +78,9 @@ const Footer = () => {
             <div className="flex justify-between items-center">
                 <div>
                     <div className="flex items-center gap-2 mt-10 mb-6">
-                        <img src={bkash} alt="bkash" className="w-20 h-10 border-2 border-[--secondary-color] p-1 bg-[--secondary-color] object-cover" />
-                        <img src={visa} alt="visa" className="w-20 h-10 border-2 border-[--secondary-color] p-1 object-cover bg-[--secondary-color]" />
-                        <img src={amazon} alt="visa" className="w-20 h-10 border-2 border-[--secondary-color] p-1 bg-[--secondary-color] object-cover" />
+                        <img src={bkash} alt="bkash" className="w-20 h-10 px-1 py-2 bg-[--secondary-color] object-cover" />
+                        <img src={visa} alt="visa" className="w-20 h-10 px-1 py-2 object-cover bg-[--secondary-color]" />
+                        <img src={amazon} alt="visa" className="w-20 h-10 px-1 py-2 bg-[--secondary-color] object-cover" />
                     </div>
                     <p className="text-lg">Copyright <span className="text-[--secondary-color]">©</span> <span className="font-sans">2024</span> Moice. All Rights Reserved</p>
                 </div>

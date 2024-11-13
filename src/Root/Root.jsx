@@ -5,6 +5,8 @@ import Footer from "../Components/Footer/Footer";
 
 
 const Root = () => {
+
+
     return (
         <div>
            <Nav2></Nav2>
