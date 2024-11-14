@@ -10,6 +10,7 @@ import img3 from '../../assets/jewelry3.png';
 import './swiper-slide.css';
 import Button from "../Button/Button";
 
+
 const Banner = () => {
     return (
         <div className="flex items-center justify-between mt-24">
@@ -34,7 +35,8 @@ const Banner = () => {
                     <SwiperSlide>
                         <div className="flex items-center justify-between pl-10 h-full gradient">
                             <div className="space-y-4">
-                                <p className="text-xs tracking-widest">MODERN CHARM</p>
+                            
+                            <p className="text-xs tracking-widest">MODERN CHARM</p>
                                 <h1 className="font-semibold text-2xl tracking-wider">ELEGANT COLLECTION <br />FOR YOUR LADY</h1>
                                 <p className="text-sm tracking-wider">More than just an accessory, it’s reflection of your individuality</p>
                                 <Button title="SHOP NOW"></Button>

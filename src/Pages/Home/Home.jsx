@@ -1,8 +1,7 @@
 import Banner from "../../Components/Banner/Banner";
-import BubbleAnimation from "../../Components/BubbleAnimation/BubbleAnimation";
 import Nav1 from "../../Components/Nav1/Nav1";
 import { Helmet } from "react-helmet-async";
-
+import Cards from "../Sections/Cards/Cards";
 
 const Home = () => {
     return (
@@ -12,7 +11,7 @@ const Home = () => {
             </Helmet>
             <Nav1></Nav1>
             <Banner></Banner>
-            <BubbleAnimation></BubbleAnimation>
+            <Cards></Cards>
         </div>
     );
 };

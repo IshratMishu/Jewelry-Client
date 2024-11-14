@@ -6,7 +6,7 @@ import about4 from '../../assets/about4.jpg';
 import about5 from '../../assets/about5.png';
 import about6 from '../../assets/about6.png';
 import Reviews from '../../Components/Reviews/Reviews';
-
+import { Fade } from "react-awesome-reveal";
 
 const AboutUs = () => {
     return (
@@ -39,14 +39,16 @@ const AboutUs = () => {
 
             <div className='flex items-center justify-center gap-5 mt-20'>
                 <div className='text-end'>
-                    <p className='tracking-widest text-xs'>Excellence</p>
-                    <h4 className='text-xl font-medium'>WHY CHOOSE US?</h4>
-                    <p className='text-sm '>Choose our jewelry store for exceptional quality <br /> and customer service. With a stunning collection <br /> of fine jewelry, fast and free shipping, and expert <br />customer support, you can shop with confidence. <br /> Experience the beauty and elegance of fine <br /> jewelry with unmatched quality and service.</p>
+                    <p className='tracking-widest text-xs'><Fade cascade>Excellence</Fade></p>
+                    <h4 className='text-xl font-medium'><Fade direction='right'>WHY CHOOSE US? </Fade></h4>
+                    <p className='text-sm '> 
+                        Choose our jewelry store for exceptional quality <br /> and customer service. With a stunning collection <br /> of fine jewelry, fast and free shipping, and expert <br />customer support, you can shop with confidence. <br /> Experience the beauty and elegance of fine <br /> jewelry with unmatched quality and service.
+                   </p>
                 </div>
                 <img src={about6} alt="" className='w-80 mr-5' />
             </div>
 
-<Reviews></Reviews>
+            <Reviews></Reviews>
         </div>
     );
 };
