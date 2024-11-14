@@ -6,6 +6,9 @@ import Home from "../Pages/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import ContactUs from '../Pages/ContactUs/Contact'
+import Blog from "../Pages/Sections/Blog/Blog";
+import SignIn from "../Pages/SignIn/SignIn";
+import SignUp from "../Pages/SignUp/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -25,10 +28,14 @@ export const router = createBrowserRouter([
       //   path: "/order/:category",
       //   element: <Order></Order>
       // },
-      // {
-      //   path: "/login",
-      //   element: <Login></Login>
-      // },
+      {
+        path: "/signIn",
+        element: <SignIn></SignIn>
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>
+      },
       {
         path: "/about",
         element: <AboutUs></AboutUs>
@@ -36,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs></ContactUs>
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
       },
     ],
   },

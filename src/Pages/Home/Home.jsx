@@ -2,6 +2,9 @@ import Banner from "../../Components/Banner/Banner";
 import Nav1 from "../../Components/Nav1/Nav1";
 import { Helmet } from "react-helmet-async";
 import Cards from "../Sections/Cards/Cards";
+import HerHim from "../Sections/HerHim/HerHim";
+import Blog from "../Sections/Blog/Blog";
+import Reviews from "../../Components/Reviews/Reviews";
 
 const Home = () => {
     return (
@@ -12,6 +15,9 @@ const Home = () => {
             <Nav1></Nav1>
             <Banner></Banner>
             <Cards></Cards>
+            <HerHim></HerHim>
+            <Blog></Blog>
+            <Reviews></Reviews>
         </div>
     );
 };

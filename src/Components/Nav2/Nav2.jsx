@@ -36,7 +36,7 @@ const Nav2 = () => {
 
 
     return (
-        <div className="navbar w-full mx-auto z-10 fixed left-0 top-24 bg-[var(--secondary-color)] text-white">
+        <div className="navbar w-full mx-auto z-50 fixed left-0 top-24 bg-[var(--secondary-color)] text-white">
             <div className="max-w-screen-xl mx-auto px-8 py-3 flex justify-between">
                 <div>
                     <ul className="flex items-center gap-16 font-medium">
@@ -51,7 +51,7 @@ const Nav2 = () => {
                             <ShopNav></ShopNav>
                         </li>
 
-                        <Link>
+                        <Link to='/blog'>
                             <li className="group flex cursor-pointer flex-col hover:text-[--primary-color]">
                                 Blog<span className="mt-[2px] h-[3px] w-[0px] bg-[--primary-color] transition-all duration-300 group-hover:w-full"></span>
                             </li>
@@ -66,7 +66,7 @@ const Nav2 = () => {
                 </div>
                 <div className="flex items-center gap-10">
                     <ShoppingCart></ShoppingCart>
-                    <Link>
+                    <Link to='/signIn'>
                         <MdOutlineManageAccounts className="text-2xl cursor-pointer hover:text-[--primary-color]" />
                     </Link>
                 </div>

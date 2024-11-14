@@ -21,3 +21,10 @@ body {
   background-image: linear-gradient(25deg,#F5DFCE,#FAFAF4,#F5DFCE, #F5DFCE);
 }
 
+/* .mySwiper{
+  --swiper-navigation-size: 36px;
+  --swiper-navigation-color: var(--secondary-color);
+  --swiper-navigation-sides-offset: 0;
+  
+} */
+

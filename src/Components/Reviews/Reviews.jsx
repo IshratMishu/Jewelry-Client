@@ -3,35 +3,28 @@ import img1 from '../../assets/jewelry3.png';
 import img2 from '../../assets/jewelry1.png';
 import img3 from '../../assets/rev.png';
 import img4 from '../../assets/rev1.png';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
-
-// import required modules
-import { Grid, Pagination, Navigation } from 'swiper/modules';
+import { Grid, Pagination } from 'swiper/modules';
 import { FaStar } from "react-icons/fa";
 
 const Reviews = () => {
     return (
         <div className='mt-20 bg-[--primary-color] p-10'>
             <h1 className='text-3xl font-medium text-center'>Clients Testimonials</h1>
-            <p className='text-center pb-10'>──────</p>
+            <p className='text-center pb-10 text-[--secondary-color]'>──────</p>
             <Swiper
-                slidesPerView={3}
-                navigation={{
-                    clickable: true,
-                }}
-                grid={{
-                    rows: 1,  
-                }}
-                spaceBetween={30}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[Grid, Navigation, Pagination]}
-                className="mySwiper h-64"
+                 slidesPerView={3}
+                 grid={{
+                     rows: 1,  
+                 }}
+                 spaceBetween={30}
+                 pagination={{
+                     clickable: true,
+                 }}
+                 modules={[Grid, Pagination]}
+                className="mySwiper h-56"
             >
                 <SwiperSlide>
                     <div className='bg-[--third-color] px-6 py-4 space-y-3 flex flex-col'>
