@@ -9,6 +9,7 @@ import ContactUs from '../Pages/ContactUs/Contact'
 import Blog from "../Pages/Sections/Blog/Blog";
 import SignIn from "../Pages/SignIn/SignIn";
 import SignUp from "../Pages/SignUp/SignUp";
+import AllProducts from "../Pages/AllProducts/AllProducts";
 
 export const router = createBrowserRouter([
   {
@@ -20,10 +21,10 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      // {
-      //   path: "/menu",
-      //   element: <Menu></Menu>
-      // },
+      {
+        path: "/products",
+        element: <AllProducts></AllProducts>
+      },
       // {
       //   path: "/order/:category",
       //   element: <Order></Order>
