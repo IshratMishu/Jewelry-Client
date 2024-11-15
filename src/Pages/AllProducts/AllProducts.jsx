@@ -1,20 +1,16 @@
-import { useEffect, useState } from "react";
 import SingleProduct from "./SingleProduct";
+import useProducts from "../../Hooks/useProducts";
+
 
 
 const AllProducts = () => {
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        fetch('/public/products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    const [products] = useProducts();
 
     return (
-        <div className="mt-20 grid grid-cols-3 gap-5">
+        <div className="mt-20 grid grid-cols-4 gap-5 px-8">
             {
-                products.map(product => <SingleProduct key={product} product={product}></SingleProduct>)
+                products.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>
+                )
             }
         </div>
     );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -8,6 +9,9 @@ const SignUp = () => {
 
     return (
         <div className="mt-10">
+                 <Helmet>
+                <title>Sign Up - Moice Jewelry</title>
+            </Helmet>
             <div className="flex w-full flex-col justify-center py-10">
                 <h2 className="pb-6 text-center text-2xl font-medium">Sign Up</h2>
                 <p className="text-center pb-6">Please fill in the information below:</p>

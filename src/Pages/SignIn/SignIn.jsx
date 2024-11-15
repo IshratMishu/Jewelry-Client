@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -5,6 +6,9 @@ import { Link } from "react-router-dom";
 const SignIn = () => {
     return (
         <div className="mt-10">
+                 <Helmet>
+                <title>Sign In - Moice Jewelry</title>
+            </Helmet>
             <div className="flex w-full flex-col justify-center py-10">
                 <h2 className="pb-6 text-center text-2xl font-medium">Sign In</h2>
                 <p className="text-center pb-6">Please enter your e-mail and password:</p>

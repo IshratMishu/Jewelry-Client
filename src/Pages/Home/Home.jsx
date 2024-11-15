@@ -5,8 +5,10 @@ import Cards from "../Sections/Cards/Cards";
 import HerHim from "../Sections/HerHim/HerHim";
 import Blog from "../Sections/Blog/Blog";
 import Reviews from "../../Components/Reviews/Reviews";
-import ShopByCategories from "../Sections/ShopByCategories/ShopByCategories";
+
 import TabProducts from "../Sections/TabProducts/TabProducts";
+
+import ShopByCategories from "../Sections/ShopByCategories/ShopByCategories";
 
 const Home = () => {
     return (

@@ -10,6 +10,8 @@ import Blog from "../Pages/Sections/Blog/Blog";
 import SignIn from "../Pages/SignIn/SignIn";
 import SignUp from "../Pages/SignUp/SignUp";
 import AllProducts from "../Pages/AllProducts/AllProducts";
+import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import ShopByCategoryFilter from "../Pages/Sections/ShopByCategoryFilter/ShopByCategoryFilter";
 
 export const router = createBrowserRouter([
   {
@@ -25,10 +27,16 @@ export const router = createBrowserRouter([
         path: "/products",
         element: <AllProducts></AllProducts>
       },
-      // {
-      //   path: "/order/:category",
-      //   element: <Order></Order>
-      // },
+      {
+        path: "/productDetail/:id",
+        element: <ProductDetails></ProductDetails>
+      },
+      {
+        path: "/product-category/:category", 
+        element: <ShopByCategoryFilter />,
+        loader: ({ params }) => fetch(`http://localhost:5000/jewelry/${params.category}`)
+    },
+    
       {
         path: "/signIn",
         element: <SignIn></SignIn>

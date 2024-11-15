@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import 'react-tabs/style/react-tabs.css';
 
 const TabProducts = () => {
     const [activeTab, setActiveTab] = useState("Rings");
@@ -29,24 +28,24 @@ const TabProducts = () => {
                 <div className='mt-10'>
                     {activeTab === "Rings" && (
                         <div>
-                            <h2 className="text-xl font-bold">Ring Section</h2>
-                            <p>Here are some amazing rings!</p>
+                            <h2 className="text-xl font-bold">Ring </h2>
+                           
                         </div>
                     )}
 
 
                     {activeTab === "Earrings" && (
                         <div>
-                            <h2 className="text-xl font-bold">Neck Section</h2>
-                            <p>Explore our beautiful neckpieces!</p>
+                            <h2 className="text-xl font-bold">earing</h2>
+                            
                         </div>
                     )}
 
 
                     {activeTab === "Necklace" && (
                         <div>
-                            <h2 className="text-xl font-bold">Brace Section</h2>
-                            <p>Check out our stylish bracelets!</p>
+                            <h2 className="text-xl font-bold">necklace</h2>
+                            
                         </div>
                     )}
                 </div>

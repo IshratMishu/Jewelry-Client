@@ -1,5 +1,6 @@
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { Map, Marker } from "pigeon-maps"
+import { Helmet } from "react-helmet-async";
 
 
 const Contact = () => {
@@ -7,7 +8,9 @@ const Contact = () => {
 
     return (
         <div className="mt-16">
-
+            <Helmet>
+                <title>Contact us - Moice Jewelry</title>
+            </Helmet>
             <div className="h-72 px-10">
                 <Map height={288} defaultCenter={locationCoordinates} defaultZoom={11}>
                     <Marker width={50} anchor={locationCoordinates} />
