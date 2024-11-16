@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import useProducts from '../../../Hooks/useProducts';
+import TabProductCards from '../TabProductCards/TabProductCards';
 
 const TabProducts = () => {
     const [activeTab, setActiveTab] = useState("Rings");
@@ -7,11 +9,17 @@ const TabProducts = () => {
         setActiveTab(tab);
     }
 
+    const [products] = useProducts();
+   
+    const rings = products.filter(item => item.category === 'Rings');
+    const earrings = products.filter(item => item.category === 'Earrings');
+    const necklace = products.filter(item => item.category === 'Necklace');
+
     return (
-        <div className='mt-28'>
+        <div className='mt-24'>
              <p className='text-center font-medium text-2xl'>Top Products</p>
              <p className='text-center pb-5 text-[--secondary-color]'>──────</p>
-            <div>
+            <div className='h-96'>
                 {/* Tab Buttons */}
                 <div className='flex justify-center gap-5'>
                     {
@@ -27,26 +35,32 @@ const TabProducts = () => {
                 {/* Tab Content */}
                 <div className='mt-10'>
                     {activeTab === "Rings" && (
-                        <div>
-                            <h2 className="text-xl font-bold">Ring </h2>
+                        <div className='grid grid-cols-3 gap-5'>
+                            {
+                                rings.map(product => <TabProductCards key={product._id} product={product}></TabProductCards>)
+                            }
                            
                         </div>
                     )}
 
 
                     {activeTab === "Earrings" && (
-                        <div>
-                            <h2 className="text-xl font-bold">earing</h2>
-                            
-                        </div>
+                        <div className='grid grid-cols-3 gap-5'>
+                        {
+                            earrings.map(product => <TabProductCards key={product._id} product={product}></TabProductCards>)
+                        }
+                       
+                    </div>
                     )}
 
 
                     {activeTab === "Necklace" && (
-                        <div>
-                            <h2 className="text-xl font-bold">necklace</h2>
-                            
-                        </div>
+                       <div className='grid grid-cols-3 gap-5'>
+                       {
+                           necklace.map(product => <TabProductCards key={product._id} product={product}></TabProductCards>)
+                       }
+                      
+                   </div>
                     )}
                 </div>
 

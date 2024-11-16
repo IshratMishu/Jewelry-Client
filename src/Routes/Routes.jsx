@@ -12,6 +12,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import AllProducts from "../Pages/AllProducts/AllProducts";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import ShopByCategoryFilter from "../Pages/Sections/ShopByCategoryFilter/ShopByCategoryFilter";
+import ListSortCategoriesShop from "../Pages/ListSortCategoriesShop/ListSortCategoriesShop";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path: "/products",
         element: <AllProducts></AllProducts>
+      },
+      {
+        path: "/list",
+        element: <ListSortCategoriesShop></ListSortCategoriesShop>
       },
       {
         path: "/productDetail/:id",

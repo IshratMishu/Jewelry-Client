@@ -110,10 +110,10 @@
         "shipping": "Standard shipping available with tracking included. Expedited options also available."
     },
     {
-        "name": "Diamond Solitaire Ring",
+        "name": "Diamond Solitaire Bracelet",
         "image": "https://i.ibb.co.com/n0Bk6Fy/Screenshot-2024-11-15-020611.png",
         "price": 350,
-        "category": "Rings",
+        "category": "Bracelet",
         "brand": "Eternal Spark",
         "availability": "In stock!",
         "description": "This classic diamond solitaire ring sparkles with a stunning single diamond set in a luxurious band. Ideal for engagements or special occasions. Each diamond is hand-selected for brilliance, cut, and color, ensuring the highest quality. Crafted from 14k white gold, this piece is both timeless and elegant. The round brilliant diamond enhances the ring's sophistication and style. It combines classic and contemporary designs, making it versatile for any jewelry collection. Celebrate life's special moments with this beautiful ring, the perfect symbol of love and commitment.",
@@ -121,10 +121,10 @@
         "shipping": "Free shipping on orders over $50. Standard shipping takes 5-7 business days. Expedited shipping options are available."
     },
     {
-        "name": "Rose Gold Eternity Ring",
+        "name": "Rose Gold Eternity Choker",
         "image": "https://i.ibb.co.com/CBnxyNW/Screenshot-2024-11-15-000000.png",
         "price": 400,
-        "category": "Rings",
+        "category": "Choker",
         "brand": "LuxJewels",
         "availability": " In stock!",
         "description": "This rose gold eternity ring is designed with a seamless circle of gems, symbolizing endless love and commitment. The 14k rose gold setting enhances the brilliance of each carefully chosen stone. The slender band provides a comfortable fit while showcasing a luxurious sparkle. Suitable as a wedding band or a unique fashion statement. Wear it solo or stack with other rings for a personalized look. It's an ideal gift for anniversaries or birthdays. Crafted to last, each stone is set with precision, creating a timeless piece for any jewelry lover.",
@@ -132,10 +132,10 @@
         "shipping": "Orders over $75 qualify for free shipping. Standard delivery is within 5-10 business days."
     },
     {
-        "name": "Classic Gold Band",
+        "name": "Classic Watch",
         "image": "https://i.ibb.co.com/DQ2ByB5/Screenshot-2024-11-15-021208.png",
         "price": 250,
-        "category": "Rings",
+        "category": "Watch",
         "brand": "GoldMine",
         "availability": "Stock out!",
         "description": "This classic gold band is an essential piece, perfect for any occasion. Made from high-quality 18k yellow gold, it is durable, stylish, and versatile. Ideal for both men and women, this band symbolizes tradition and sophistication. A piece that never goes out of style. Its smooth finish and comfortable fit make it ideal for everyday wear or as a wedding band. Whether as a fashion accessory or a meaningful gift, this gold band stands the test of time and trends.",
@@ -143,10 +143,10 @@
         "shipping": "Free shipping available for orders above $100. Processing time is 3-5 business days."
     },
     {
-        "name": "Platinum Diamond Ring",
+        "name": "Platinum Diamond Choker",
         "image": "https://i.ibb.co.com/2NBZmBM/Screenshot-2024-11-15-020537.png",
         "price": 600,
-        "category": "Rings",
+        "category": "Choker",
         "brand": "TrueGems",
         "availability": " In stock!",
         "description": "A luxurious platinum ring with a stunning diamond centerpiece. This ring captures elegance and refinement, perfect for life’s grand celebrations. Platinum's durability ensures that this ring maintains its beauty through the years. The diamond adds a focal point that dazzles under any light. Its elegant, timeless design is ideal for both engagements and anniversaries. Wear a piece of luxury with this stunning platinum diamond ring, crafted for those who appreciate quality and style.",
@@ -154,10 +154,10 @@
         "shipping": "Complimentary shipping included with every purchase. Delivery within 7-10 business days."
     },
     {
-        "name": "Vintage Sapphire Ring",
+        "name": "Vintage Sapphire Bracelet",
         "image": "https://i.ibb.co.com/2NBZmBM/Screenshot-2024-11-15-020537.png",
         "price": 500,
-        "category": "Rings",
+        "category": "Bracelet",
         "brand": "Royal Jewels",
         "availability": " In stock!",
         "description": "This vintage-inspired ring features a deep blue sapphire surrounded by diamonds, set in sterling silver. Each stone is hand-set for the perfect fit and sparkle. Sapphires are known for their strength and beauty, making this ring a cherished heirloom. Its intricate design brings a touch of vintage elegance to modern style. A thoughtful gift for lovers of classic and timeless jewelry, crafted with attention to detail and quality materials.",
@@ -165,10 +165,10 @@
         "shipping": "Free standard shipping on all orders. Estimated delivery is 5-8 business days."
     },
     {
-        "name": "Emerald Halo Ring",
+        "name": "Emerald Halo Brooches",
         "image": "https://i.ibb.co.com/2NBZmBM/Screenshot-2024-11-15-020537.png",
         "price": 550,
-        "category": "Rings",
+        "category": "Brooches",
         "brand": "Gemstone Elegance",
         "availability": " Stock out!",
         "description": "The emerald halo ring combines sophistication with a bold pop of color. Featuring a vibrant emerald surrounded by a halo of diamonds. Set in 14k white gold, this ring brings out the stone’s natural beauty and brilliance. A showstopper, it’s perfect for special occasions or as a unique addition to any jewelry collection. With its elegant style and stunning sparkle, this ring represents luxury and elegance.",

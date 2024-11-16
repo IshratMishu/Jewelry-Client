@@ -24,6 +24,7 @@ const Home = () => {
             <ShopByCategories></ShopByCategories>
             <Blog></Blog>
             <Reviews></Reviews>
+           
         </div>
     );
 };

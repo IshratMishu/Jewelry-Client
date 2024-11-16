@@ -1,0 +1,9 @@
+.range-slider .range-slider__range {
+    background: var(--secondary-color);
+    height: 6px;
+  }
+.range-slider .range-slider__thumb {
+    background: var(--secondary-color);
+    height: 18px;
+    width: 18px;
+  }

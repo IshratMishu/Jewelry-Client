@@ -17,79 +17,86 @@ const ShopByCategories = () => {
             <p className='text-center pb-2 text-[--secondary-color]'>──────</p>
 
             <div className="flex justify-around mt-5 cursor-pointer">
-        
-             
-            <Link to="/product-category/Rings">
-            <div className="flex flex-col items-center group">
-                    <div className="bg-[--primary-color] h-32 w-28 group-hover:border group-hover:border-[--secondary-color] group-hover:bg-transparent transition-all duration-300">
-                        <GiDiamondRing className="mx-auto text-7xl mt-6 text-[--secondary-color]" />
+                <Link to="/product-category/Rings">
+                    <div className="flex flex-col items-center group">
+                        <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">
+                            <GiDiamondRing className="mx-auto text-7xl mt-6 group-hover:text-black text-[--secondary-color]" />
+                        </div>
+                        <p className="pt-2 underline group-hover:text-[--secondary-color]">Rings</p>
                     </div>
-                    <p className="pt-2 underline text-[--secondary-color]">RINGS</p>
-                </div>
-            </Link>
-        
-     
-               <Link to="/product-category/Necklace">
+                </Link>
+
+
+                {/* <Link to="/product-category/Necklace">
                <div className="flex flex-col items-center group">
                     <div className="bg-[--primary-color] h-32 w-28 group-hover:border group-hover:border-[--secondary-color] group-hover:bg-transparent transition-all duration-300">
                         <GiDoubleNecklace className="mx-auto text-7xl mt-6 text-[--secondary-color]" />
                     </div>
                     <p className="pt-2 underline text-[--secondary-color]">NECKLACE</p>
                 </div>
-               </Link>
+               </Link> */}
 
-               <Link to="/product-category/Earings">
-                <div className="flex flex-col items-center group">
-                    <div className="bg-[--primary-color] h-32 w-28 group-hover:border group-hover:border-[--secondary-color] group-hover:bg-transparent transition-all duration-300">
-                        <GiHeartEarrings className="mx-auto text-7xl mt-6 text-[--secondary-color]" />
+                <Link to="/product-category/Necklace">
+                    <div className="flex flex-col items-center group">
+                        <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">
+                            <GiDoubleNecklace className="mx-auto text-7xl mt-6 group-hover:text-black text-[--secondary-color]" />
+                        </div>
+                        <p className="pt-2 underline group-hover:text-[--secondary-color]">Necklace</p>
                     </div>
-                    <p className="pt-2 underline text-[--secondary-color]">EARRINGS</p>
-                </div>
+                </Link>
+
+                <Link to="/product-category/Earrings">
+                    <div className="flex flex-col items-center group">
+                        <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">
+                            <GiHeartEarrings className="mx-auto text-7xl mt-6 group-hover:text-black text-[--secondary-color]" />
+                        </div>
+                        <p className="pt-2 underline group-hover:text-[--secondary-color]">Earrings</p>
+                    </div>
                 </Link>
 
                 <Link to="/product-category/Pendant">
-                <div className="flex flex-col items-center group">
-                    <div className="bg-[--primary-color] h-32 w-28 group-hover:border group-hover:border-[--secondary-color] hover:bg-transparent transition-all duration-300">
-                        <GiTribalPendant className="mx-auto text-7xl mt-6 text-[--secondary-color]" />
+                    <div className="flex flex-col items-center group">
+                        <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">
+                            <GiTribalPendant className="mx-auto text-7xl mt-6 group-hover:text-black text-[--secondary-color]" />
+                        </div>
+                        <p className="pt-2 underline group-hover:text-[--secondary-color]">Pendant</p>
                     </div>
-                    <p className="pt-2 underline text-[--secondary-color]">PENDANT</p>
-                </div>
                 </Link>
 
-                <Link to="/product-category/Bracelets">
-                <div className="flex flex-col items-center group">
-                    <div className="bg-[--primary-color] h-32 w-28 group-hover:border group-hover:border-[--secondary-color] group-hover:bg-transparent transition-all duration-300">
-                        <TbVectorBezierCircle className="mx-auto text-7xl mt-6 text-[--secondary-color]" />
+                <Link to="/product-category/Bracelet">
+                    <div className="flex flex-col items-center group">
+                        <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">
+                            <TbVectorBezierCircle className="mx-auto text-7xl mt-6 group-hover:text-black text-[--secondary-color]" />
+                        </div>
+                        <p className="pt-2 underline group-hover:text-[--secondary-color]">Bracelet</p>
                     </div>
-                    <p className="pt-2 underline text-[--secondary-color]">BRACELETS</p>
-                </div>
                 </Link>
 
                 <Link to="/product-category/Choker">
-                <div className="flex flex-col items-center group">
-                    <div className="bg-[--primary-color] h-32 w-28 group-hover:border group-hover:border-[--secondary-color] group-hover:bg-transparent transition-all duration-300">
-                        <GiIntricateNecklace className="mx-auto text-7xl mt-6 text-[--secondary-color]" />
+                    <div className="flex flex-col items-center group">
+                        <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">
+                            <GiIntricateNecklace className="mx-auto text-7xl mt-6 group-hover:text-black text-[--secondary-color]" />
+                        </div>
+                        <p className="pt-2 underline group-hover:text-[--secondary-color]">Choker</p>
                     </div>
-                    <p className="pt-2 underline text-[--secondary-color]">CHOKER</p>
-                </div>
                 </Link>
 
                 <Link to="/product-category/Brooches">
-                <div className="flex flex-col items-center group">
-                    <div className="bg-[--primary-color] h-32 w-28 group-hover:border group-hover:border-[--secondary-color] group-hover:bg-transparent transition-all duration-300">
-                        <GiButterflyFlower className="mx-auto text-7xl mt-6 text-[--secondary-color]" />
+                    <div className="flex flex-col items-center group">
+                        <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">
+                            <GiButterflyFlower className="mx-auto text-7xl mt-6 group-hover:text-black text-[--secondary-color]" />
+                        </div>
+                        <p className="pt-2 underline group-hover:text-[--secondary-color]">Brooches</p>
                     </div>
-                    <p className="pt-2 underline text-[--secondary-color]">BROOCHES</p>
-                </div>
                 </Link>
 
                 <Link to="/product-category/watch">
-                <div className="flex flex-col items-center group">
-                    <div className="bg-[--primary-color] h-32 w-28 group-hover:border group-hover:border-[--secondary-color] group-hover:bg-transparent transition-all duration-300">
-                        <PiWatchLight className="mx-auto text-7xl mt-6 text-[--secondary-color]" />
+                    <div className="flex flex-col items-center group">
+                        <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">
+                            <PiWatchLight className="mx-auto text-7xl mt-6 group-hover:text-black text-[--secondary-color]" />
+                        </div>
+                        <p className="pt-2 underline group-hover:text-[--secondary-color]">Watch</p>
                     </div>
-                    <p className="pt-2 underline text-[--secondary-color]">WATCH</p>
-                </div>
                 </Link>
             </div>
         </div>

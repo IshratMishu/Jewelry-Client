@@ -8,7 +8,7 @@ const Blog = () => {
         <div className='mt-28'>
             <p className='text-center font-medium text-2xl'>Latest News</p>
             <p className='text-center pb-2 text-[--secondary-color]'>──────</p>
-            <div className="flex items-center gap-10 justify-center cursor-pointer">
+            <div className="flex items-center gap-5 justify-center cursor-pointer">
                 <div className='space-y-2'>
                     <div className='group h-44 w-80 relative'>
                         <img src={img1} alt="" className='h-full w-full object-cover' />

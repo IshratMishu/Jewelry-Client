@@ -17,10 +17,10 @@ const SingleProduct = ({ product }) => {
 
     return (
         <div>
-            <div className='border items-center hover:border-[--secondary-color] transition-all duration-300 relative h-72 w-52 group'>
+            <div className='border items-center hover:border-[--secondary-color] transition-all duration-300 relative h-72 w-56 group'>
                 <Link to={`/productDetail/${_id}`}><img src={image} alt="" className='w-52 h-44 object-cover transition-transform hover:scale-110 p-3' />
                 </Link>
-                <div className='pt-2 space-y-1 pl-3'>
+                <div className='space-y-1 p-2'>
                     <p className='font-medium'>{name}</p>
                     <p className='text-xs text-green-700'>{availability}</p>
                     <div className='flex items-center text-sm text-[--secondary-color]'>
