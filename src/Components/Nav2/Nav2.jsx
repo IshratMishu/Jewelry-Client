@@ -6,8 +6,12 @@ import InfoPages from "./InfoPages/InfoPages";
 import ShopNav from "./Shop/ShopNav";
 import { useEffect } from "react";
 import './nav2.css'
+import Dropdown from "./Dropdown";
+import useAuth from "../../Hooks/useAuth";
+
 
 const Nav2 = () => {
+    const {  user } = useAuth();
     const location = useLocation();
 
     useEffect(() => {
@@ -34,9 +38,8 @@ const Nav2 = () => {
 
     }, [location]);
 
-
     return (
-        <div className="navbar w-full mx-auto z-50 fixed left-0 top-24 bg-[var(--secondary-color)] text-white">
+        <div className="navbar w-full mx-auto z-50 fixed left-0 top-24 bg-[var(--secondary-color)] text-white h-16 pt-2">
             <div className="max-w-screen-xl mx-auto px-8 py-3 flex justify-between">
                 <div>
                     <ul className="flex items-center gap-16 font-medium">
@@ -66,9 +69,15 @@ const Nav2 = () => {
                 </div>
                 <div className="flex items-center gap-10">
                     <ShoppingCart></ShoppingCart>
-                    <Link to='/signIn'>
-                        <MdOutlineManageAccounts className="text-2xl cursor-pointer hover:text-[--primary-color]" />
-                    </Link>
+                    {
+                        user ?
+                            <Dropdown></Dropdown>
+                            :
+                            <Link to='/signIn'>
+                                <MdOutlineManageAccounts className="text-2xl cursor-pointer hover:text-[--primary-color]" />
+                            </Link>
+                    }
+
                 </div>
             </div>
         </div>

@@ -1,31 +1,91 @@
 import { Helmet } from "react-helmet-async";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import useAuth from "../../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 
 const SignIn = () => {
+    const { signInUser, googleLogin } = useAuth();
+    const [credentials, setCredentials] = useState("");
+
+    // hook form
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+
+
+    // navigation systems
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state || "/";
+
+    // Function to handle social login
+    const handleSocialLogin = socialLoginProvider => {
+        socialLoginProvider()
+            .then(result => {
+                if (result.user) {
+                    toast.success("Login Success!");
+                    navigate(from);
+                }
+            });
+    }
+
+
+    // Function to handle form submission
+    const onLogin = data => {
+        const { email, password } = data;
+
+        signInUser(email, password)
+            .then((result) => {
+                if (result.user) {
+                    toast.success("Login Success!");
+                    navigate(from);
+                }
+            })
+            .catch(() => {
+                setCredentials('Invalid Credentials! Please try again.');
+            })
+    }
+
+
     return (
         <div className="mt-10">
-                 <Helmet>
+            <Helmet>
                 <title>Sign In - Moice Jewelry</title>
             </Helmet>
             <div className="flex w-full flex-col justify-center py-10">
                 <h2 className="pb-6 text-center text-2xl font-medium">Sign In</h2>
                 <p className="text-center pb-6">Please enter your e-mail and password:</p>
-                <form className="flex w-full flex-col items-center justify-center gap-4">
+                <form className="flex w-full flex-col items-center justify-center gap-4" onSubmit={handleSubmit(onLogin)}>
                     <input
                         className="border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none w-2/5"
                         type="email"
                         placeholder="Email"
                         name="email"
+                        {...register("email", { required: true })}
                     />
+                    {errors.email && <span className="text-red-700">This field is required</span>}
+
                     <input
                         className="w-2/5 border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none"
                         type="password"
                         placeholder="Password"
                         name="password"
+                        {...register("password", { required: true })}
                     />
-                    <button className="border border-[--secondary-color] md:px-8 px-4 py-2 bg-[--secondary-color] text-white hover:bg-transparent hover:text-[var(--secondary-color)] w-2/5 mt-3"><span className="flex items-center gap-2 justify-center">SIGN IN<MdOutlineArrowRightAlt /></span></button>
+                    {errors.password && <span className="text-red-700">This field is required</span>}
+
+                    <button onClick={() => handleSocialLogin} className="border border-[--secondary-color] md:px-8 px-4 py-2 bg-[--secondary-color] text-white hover:bg-transparent hover:text-[var(--secondary-color)] w-2/5 mt-3"><span className="flex items-center gap-2 justify-center">SIGN IN<MdOutlineArrowRightAlt /></span></button>
+                    {
+                    credentials && <small className="text-red-700">{credentials}</small>
+                }
+
                     <p className="text-[14px] text-gray-400 flex gap-1">
                         Do not have an account ? <Link to='/signUp'><p className="text-[--secondary-color] hover:underline">Create one</p></Link>
                     </p>
@@ -37,7 +97,7 @@ const SignIn = () => {
                     <hr className="flex-1 border-[--secondary-color]" />
                 </div>
                 {/* sign with google */}
-                <button className="group mx-auto flex h-[50px] w-fit items-center overflow-hidden shadow-md outline-none ring-1 ring-[--secondary-color]">
+                <button className="group mx-auto flex h-[50px] w-fit items-center overflow-hidden shadow-md outline-none ring-1 ring-[--secondary-color]" onClick={() => handleSocialLogin(googleLogin)}>
                     <div className="relative z-20 flex h-full items-center bg-[--secondary-color] px-4 text-lg text-white duration-300 group-hover:bg-transparent group-hover:text-[--secondary-color]">
                         Signin with
                     </div>

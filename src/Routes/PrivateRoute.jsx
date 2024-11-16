@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
 
     if (loading) {
         return (
-            <div className="relative w-20 h-20 flex items-center justify-center mx-auto z-50 mt-36">
+            <div className="relative w-20 h-20 flex items-center justify-center mx-auto mt-36">
                 <div className="w-10 h-10 animate-[ping_2s_linear_infinite] border-2 rounded-full border-[--secondary-color]"></div>
                 <div className="w-10 h-10 animate-[ping_2s_linear_3s_infinite] border-2 rounded-full border-[--secondary-color] absolute"></div>
             </div>
