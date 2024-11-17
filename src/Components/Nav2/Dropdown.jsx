@@ -1,6 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
+
 const Dropdown = () => {
     const { logOut, user } = useAuth();
     const [open, setOpen] = useState(false);

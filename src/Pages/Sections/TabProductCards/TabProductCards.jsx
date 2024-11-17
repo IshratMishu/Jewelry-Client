@@ -9,8 +9,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { BiSolidPurchaseTag } from "react-icons/bi";
 import PropTypes from 'prop-types';
+import useShoppingCart from "../../../Hooks/useShoppingCart";
 
 const TabProductCards = ({product}) => {
+    const {handleCart} = useShoppingCart();
     const { _id, name, image, price, availability, category } = product;
     const [openModal, setOpenModal] = useState(false);
 
@@ -58,7 +60,7 @@ const TabProductCards = ({product}) => {
                                         <p className="font-sans font-semibold text-xl">${price}</p>
                                         <p>Availability: <span className="text-green-700">{availability}</span></p>
                                         <QuantityBox></QuantityBox>
-                                        <button className="border border-[var(--secondary-color)] w-52 py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium justify-center"><MdOutlineShoppingCart />Add to cart<MdOutlineArrowRightAlt /></button>
+                                        <button onClick={()=>handleCart(product)} className="border border-[var(--secondary-color)] w-52 py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium justify-center"><MdOutlineShoppingCart />Add to cart<MdOutlineArrowRightAlt /></button>
                                         <button className="border border-[var(--secondary-color)] py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium w-52 justify-center"><BiSolidPurchaseTag />Buy now<MdOutlineArrowRightAlt /></button>
                                         <p className="hover:text-[--secondary-color] flex items-center gap-1 underline cursor-pointer"><IoMdHeartEmpty className="text-[--secondary-color]" />Add to wishlist</p>
                                     </div>
@@ -70,7 +72,7 @@ const TabProductCards = ({product}) => {
 
 
 
-                <MdOutlineShoppingCart className="hover:bg-[--secondary-color] hover:text-white rounded-full text-2xl p-1 cursor-pointer" />
+                <MdOutlineShoppingCart onClick={()=> handleCart(product)} className="hover:bg-[--secondary-color] hover:text-white rounded-full text-2xl p-1 cursor-pointer" />
             </div>
         </div>
     </div>

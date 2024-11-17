@@ -6,11 +6,13 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import useAuth from "../../Hooks/useAuth";
 import toast from "react-hot-toast";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 
 const SignIn = () => {
     const { signInUser, googleLogin } = useAuth();
     const [credentials, setCredentials] = useState("");
+const axiosPublic = useAxiosPublic();
 
     // hook form
     const {
@@ -23,18 +25,29 @@ const SignIn = () => {
     // navigation systems
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location?.state || "/";
+    const from = location.state?.from?.pathname || "/";
 
     // Function to handle social login
     const handleSocialLogin = socialLoginProvider => {
         socialLoginProvider()
             .then(result => {
-                if (result.user) {
-                    toast.success("Login Success!");
-                    navigate(from);
+                const userInfo ={
+                    email: result.user?.email,
+                    name: result.user?.displayName,
+                    photo: result.user?.photoURL,
+                    role: 'User'
                 }
+                axiosPublic.post('/users', userInfo)
+                .then(res=>{
+                    if (res.data?.insertedId || res.data?.message === "user already exists"){
+                        toast.success("Login Success!");
+                        navigate(from);
+                    }
+                })
             });
     }
+
+ 
 
 
     // Function to handle form submission
@@ -86,9 +99,9 @@ const SignIn = () => {
                     credentials && <small className="text-red-700">{credentials}</small>
                 }
 
-                    <p className="text-[14px] text-gray-400 flex gap-1">
+                    <h1 className="text-[14px] text-gray-400 flex gap-1">
                         Do not have an account ? <Link to='/signUp'><p className="text-[--secondary-color] hover:underline">Create one</p></Link>
-                    </p>
+                    </h1>
                 </form>
                 {/* divider  */}
                 <div className="my-8 flex items-center px-8 w-2/5 mx-auto">

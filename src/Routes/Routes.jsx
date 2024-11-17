@@ -13,6 +13,9 @@ import AllProducts from "../Pages/AllProducts/AllProducts";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import ShopByCategoryFilter from "../Pages/Sections/ShopByCategoryFilter/ShopByCategoryFilter";
 import ListSortCategoriesShop from "../Pages/ListSortCategoriesShop/ListSortCategoriesShop";
+import Dashboard from "../Layout/Dashboard/Dashboard";
+import Cart from "../Pages/Dashboard/Cart/Cart";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -62,8 +65,23 @@ export const router = createBrowserRouter([
         path: "/blog",
         element: <Blog></Blog>
       },
+      {
+        path: "/cart",
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>
+      }
     ],
   },
+
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      // {
+      //   path: "cart",
+      //   element: <Cart></Cart>
+      // }
+    ]
+  }
 ],
   {
     future: {

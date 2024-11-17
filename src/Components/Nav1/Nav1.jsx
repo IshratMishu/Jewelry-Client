@@ -20,7 +20,7 @@ const Nav1 = () => {
 
             <div className="flex items-center gap-2">
                 {/* select location */}
-                <div className="relative">
+                <div className="relative z-50">
                     <div onClick={() => setIsOpen(!isOpen)} className="flex w-56 items-center justify-between px-6 py-2 border">
                         <h1 className="">{selectedValue}</h1>
                         <TfiAngleDown className={`${isOpen ? '-rotate-180' : 'rotate-0'} duration-300`} />
@@ -44,7 +44,7 @@ const Nav1 = () => {
             {/* language and currency */}
             <div className="flex items-center text-xs gap-10">
                 {/* language */}
-                <div className="relative">
+                <div className="relative z-50">
                     <div onClick={() => setIsOpenEn(!isOpenEn)} className="flex items-center gap-1 cursor-pointer">
                         <h1 className="underline">EN</h1>
                         <TfiAngleDown />
@@ -58,7 +58,7 @@ const Nav1 = () => {
                 </div>
 
                 {/* currency */}
-                <div className="relative">
+                <div className="relative z-50">
                     <div onClick={() => setIsOpenUsd(!isOpenUsd)} className="flex items-center gap-1 cursor-pointer">
                         <h1 className="underline">$ USD</h1>
                         <TfiAngleDown />

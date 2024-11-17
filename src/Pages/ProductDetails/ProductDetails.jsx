@@ -9,8 +9,10 @@ import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import InnerImageZoom from 'react-inner-image-zoom';
 import ReviewForm from "../../Components/ReviewForm/ReviewForm";
 import { Helmet } from "react-helmet-async";
+import useShoppingCart from "../../Hooks/useShoppingCart";
 
 const ProductDetails = () => {
+    const {handleCart} = useShoppingCart();
     const { id } = useParams();
     const [details, setDetails] = useState([]);
 
@@ -47,9 +49,10 @@ const ProductDetails = () => {
                     </div>
                     <div className="space-y-4">
                         <p className="font-sans font-semibold text-xl">${details.price}</p>
+                        <p>Brand: <span className="text-sm">{details.brand}</span></p>
                         <p>Availability: <span className="text-green-700">{details.availability}</span></p>
                         <QuantityBox></QuantityBox>
-                        <button className="border border-[var(--secondary-color)] w-52 py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium justify-center"><MdOutlineShoppingCart />Add to cart<MdOutlineArrowRightAlt /></button>
+                        <button onClick={()=>handleCart(details)} className="border border-[var(--secondary-color)] w-52 py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium justify-center"><MdOutlineShoppingCart />Add to cart<MdOutlineArrowRightAlt /></button>
                         <button className="border border-[var(--secondary-color)] py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium w-52 justify-center"><BiSolidPurchaseTag />Buy now<MdOutlineArrowRightAlt /></button>
 
                         <p className="hover:text-[--secondary-color] flex items-center gap-1 underline cursor-pointer"><IoMdHeartEmpty className="text-[--secondary-color]" />Add to wishlist</p>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { IoEye, IoEyeOff } from "react-icons/io5";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
@@ -22,7 +22,8 @@ const SignUp = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
-
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
 
     const onSubmit = async (data) => {
@@ -57,7 +58,7 @@ const SignUp = () => {
                         axiosPublic.post("/users", userInfo).then((res) => {
                             if (res.data?.insertedId) {
                                 toast.success("Sign Up Success");
-                                navigate("/");
+                                navigate(from);
                             }
                         });
                     });
@@ -94,22 +95,9 @@ const SignUp = () => {
                     {errors.email && <span className="text-red-700">This field is required</span>}
 
                     <div className="w-2/5">
-                        <input type="file" name="" {...register("photo", { required: true })} />
+                        <input type="file" name="" {...register("photo", { required: true })} className="border border-[--secondary-color] w-full py-2 pl-4" />
                     </div>
-                    {errors.photo && <span className="text-red-700">{errors.photo.message}</span>}
-
-
-                    {/* <label htmlFor="type2-2" className="flex ">
-                <div className="w-fit whitespace-nowrap bg-[--secondary-color] px-4 py-2 text-white">Choose File</div>
-                <div className="flex w-full items-center border border-[--secondary-color] px-2 ">{showName.name ? showName.name : 'No File Chosen'}</div>
-            </label>
-            <input
-                onChange={(e) => {
-                    if (e.target.files && e.target.files[0]) {
-                        const imageFile = e.target.files[0];
-                        setShowName(imageFile);
-                    }
-                }} className="hidden" type="file" name="" id="type2-2" {...register("photo", { required: true })}/> */}
+                    {errors.photo && <span className="text-red-700">This field is required</span>}
 
 
                     <div className="w-2/5 border border-[--secondary-color] py-2 pl-4 flex justify-between">
@@ -149,9 +137,9 @@ const SignUp = () => {
 
 
                     <button className="border border-[--secondary-color] md:px-8 px-4 py-2 bg-[--secondary-color] text-white hover:bg-transparent hover:text-[var(--secondary-color)] w-2/5 mt-3"><span className="flex items-center gap-2 justify-center">SIGN UP<MdOutlineArrowRightAlt /></span></button>
-                    <p className="text-[14px] text-gray-400 flex gap-1">
+                    <h1 className="text-[14px] text-gray-400 flex gap-1">
                         Already have an account ? <Link to='/signIn'><p className="text-[--secondary-color] hover:underline">Sign in here</p></Link>
-                    </p>
+                    </h1>
                 </form>
             </div>
         </div>
