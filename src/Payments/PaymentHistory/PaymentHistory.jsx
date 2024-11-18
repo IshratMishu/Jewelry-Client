@@ -24,12 +24,12 @@ const PaymentHistory = () => {
             <h1 className="text-2xl font-medium">MY ACCOUNT</h1>
             <div className="flex mt-8 gap-10">
                 <Sidebar></Sidebar>
-                <div className="pl-10">
-                    <h2 className="text-xl font-sans pb-4">Total Payments: {payments.length}</h2>
+                <div className="pl-10 w-[75%]">
+                    <h2 className="text-xl font-sans pb-4 text-end">Total Payments: {payments.length}</h2>
                     <div className="overflow-x-auto">
                         <table className="w-full">
                             <thead>
-                                <tr>
+                                <tr className="bg-[--primary-color]">
                                     <th className="w-[50px] px-6 py-4 text-start">
                                     </th>
                                     <th className="px-4 py-4 text-start">Price</th>
@@ -41,17 +41,17 @@ const PaymentHistory = () => {
                             <tbody>
                                 {
                                     payments.map((payment, index) => <tr key={payment._id} className=" border ">
-                                        <th className="px-6 py-4 text-start">
+                                        <th className="px-6 py-4 text-start text-sm">
                                             {index + 1}
                                         </th>
-                                        <th className="px-4 py-4 text-start font-sans">
+                                        <th className="px-4 py-4 text-start font-sans text-sm">
                                             ${payment.price}
                                         </th>
-                                        <th className="px-1 py-4 text-start font-sans">{payment.transactionId}</th>
-                                        <th className="px-6 py-4 text-start">
-                                            {payment.status}
+                                        <th className="px-1 py-4 text-start font-sans text-sm">{payment.transactionId}</th>
+                                        <th className="px-6 py-4 text-start text-sm ">
+                                            <span className="bg-[--secondary-color] px-2 py-1 text-white">{payment.status}</span>
                                         </th>
-                                        <th className="px-6 py-4 text-start font-sans">
+                                        <th className="px-6 py-4 text-start font-sans text-sm">
                                             {payment.date}
                                         </th>
                                     </tr>)
