@@ -21,6 +21,7 @@ import DashboardPage from "../Pages/Dashboard/DashboardPage/DashboardPage";
 import EditAccount from "../Pages/Dashboard/EditAccount/EditAccount";
 import Wishlist from "../Pages/Dashboard/Wishlist/Wishlist";
 import Invoice from "../Pages/Dashboard/InvoicePage/Invoice";
+import WelcomeMessage from "../Pages/Dashboard/WelcomeMessage/WelcomeMessage";
 
 export const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ export const router = createBrowserRouter([
       {
         path: "/my-account",
         element: <PrivateRoute><DashboardPage></DashboardPage></PrivateRoute>
+      },
+      {
+        path: "/my-account/welcome",
+        element: <PrivateRoute><WelcomeMessage></WelcomeMessage></PrivateRoute>
       },
       {
         path: "/my-account/paymentHistory",

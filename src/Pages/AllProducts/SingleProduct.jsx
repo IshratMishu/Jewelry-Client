@@ -10,10 +10,12 @@ import InnerImageZoom from 'react-inner-image-zoom';
 import QuantityBox from '../../Components/QuantityBox/QuantityBox';
 import { BiSolidPurchaseTag } from 'react-icons/bi';
 import useShoppingCart from '../../Hooks/useShoppingCart';
+import useWishlistSend from '../../Hooks/useWishlistSend';
 
 
 const SingleProduct = ({ product }) => {
     const {handleCart} = useShoppingCart();
+    const {handleWishlist} = useWishlistSend();
     const { _id, name, image, price, availability, category } = product;
     const [openModal, setOpenModal] = useState(false);
 
@@ -38,7 +40,7 @@ const SingleProduct = ({ product }) => {
 
                 <div className="absolute flex flex-col items-center opacity-0 group-hover:opacity-100 transition-all duration-200 delay-100 gap-3 top-16 right-2">
 
-                    <IoMdHeartEmpty className="hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 cursor-pointer" />
+                    <IoMdHeartEmpty onClick={() => handleWishlist(product)} className="hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 cursor-pointer" />
                     {/* <Link>
                 <PiEyes className="bg-[--primary-color] hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 transition-all duration-300 cursor-pointer shadow shadow-[--secondary-color]" />
                 </Link> */}
@@ -71,7 +73,7 @@ const SingleProduct = ({ product }) => {
                                             <QuantityBox></QuantityBox>
                                             <button onClick={()=>handleCart(product)} className="border border-[var(--secondary-color)] w-52 py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium justify-center"><MdOutlineShoppingCart />Add to cart<MdOutlineArrowRightAlt /></button>
                                             <button onClick={handleBuyNow} className="border border-[var(--secondary-color)] py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium w-52 justify-center"><BiSolidPurchaseTag />Buy now<MdOutlineArrowRightAlt /></button>
-                                            <p className="hover:text-[--secondary-color] flex items-center gap-1 underline cursor-pointer"><IoMdHeartEmpty className="text-[--secondary-color]" />Add to wishlist</p>
+                                            <p onClick={() => handleWishlist(product)} className="hover:text-[--secondary-color] flex items-center gap-1 underline cursor-pointer"><IoMdHeartEmpty className="text-[--secondary-color]" />Add to wishlist</p>
                                         </div>
                                     </div>
                                 </div>

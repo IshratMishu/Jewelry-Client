@@ -8,10 +8,11 @@ const Sidebar = () => {
     return (
         <div className="w-56">
             <ul className="space-y-4">
-                <li className="text-white flex items-center gap-2 bg-[--secondary-color] px-4 py-2 cursor-pointer"><MdOutlineManageAccounts />Dashboard</li>
-
                 <li>
-                    <NavLink to='/dashboard/wishlist' className='text-white flex items-center gap-2 bg-[--secondary-color] px-4 py-2'><IoMdHeartEmpty />Wishlist </NavLink>
+                    <NavLink to='/my-account/welcome' className='text-white flex items-center gap-2 bg-[--secondary-color] px-4 py-2'><MdOutlineManageAccounts />Dashboard</NavLink>
+                </li>
+                <li>
+                    <NavLink to='/my-account/wishlist' className='text-white flex items-center gap-2 bg-[--secondary-color] px-4 py-2'><IoMdHeartEmpty />Wishlist </NavLink>
                 </li>
 
                 <li>

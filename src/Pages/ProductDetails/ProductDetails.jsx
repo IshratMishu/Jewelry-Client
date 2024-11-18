@@ -10,10 +10,12 @@ import InnerImageZoom from 'react-inner-image-zoom';
 import ReviewForm from "../../Components/ReviewForm/ReviewForm";
 import { Helmet } from "react-helmet-async";
 import useShoppingCart from "../../Hooks/useShoppingCart";
+import useWishlistSend from "../../Hooks/useWishlistSend";
 
 
 const ProductDetails = () => {
     const {handleCart} = useShoppingCart();
+    const {handleWishlist} = useWishlistSend();
     const { id } = useParams();
     const [details, setDetails] = useState([]);
 
@@ -60,7 +62,7 @@ const ProductDetails = () => {
                        <button onClick={handleBuyNow} className="border border-[var(--secondary-color)] py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium w-52 justify-center mt-2"><BiSolidPurchaseTag />Buy now<MdOutlineArrowRightAlt /></button>
                        
 
-                        <p className="hover:text-[--secondary-color] flex items-center gap-1 underline cursor-pointer"><IoMdHeartEmpty className="text-[--secondary-color]" />Add to wishlist</p>
+                        <p onClick={()=>handleWishlist(details)} className="hover:text-[--secondary-color] flex items-center gap-1 underline cursor-pointer"><IoMdHeartEmpty className="text-[--secondary-color]" />Add to wishlist</p>
                     </div>
                 </div>
                 <div className="w-[30%] space-y-4">

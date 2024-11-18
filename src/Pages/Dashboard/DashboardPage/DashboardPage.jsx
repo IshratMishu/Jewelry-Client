@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import useAuth from "../../../Hooks/useAuth";
+
 import Sidebar from "./Sidebar";
+import useAuth from "../../../Hooks/useAuth";
 
 
 const DashboardPage = () => {
@@ -32,9 +33,9 @@ const DashboardPage = () => {
                 <Sidebar></Sidebar>
 
                 {/* dashboard content */}
-                <div className="flex-1 pl-10 ">
-                    <h1 className="font-medium pb-2">Hello {user?.displayName} ,</h1>
-                    <p>From your account dashboard you can view your recent orders, see your wishlist , payment <br /> history, and edit your account details.</p>
+                <div className=" pl-10 ">
+                    <h1 className="font-medium pb-2">Hello {user?.displayName} 👋,</h1>
+                    <p>From your account dashboard you can view your <span className="text-[--secondary-color]">invoice</span>, see your <span className="text-[--secondary-color]">wishlist</span> , <span className="text-[--secondary-color]">payment <br /> history</span>, and edit your <span className="text-[--secondary-color]">account details</span>.</p>
                 </div>
             </div>
         </div>
