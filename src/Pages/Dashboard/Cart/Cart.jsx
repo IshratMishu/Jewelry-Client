@@ -97,7 +97,7 @@ const Cart = () => {
                                 <hr />
                                 <h2 className="flex justify-between">Total: <span className="font-sans">${totalPrice}</span></h2>
                                 <hr />
-                                <Link to='/'><button className="border border-[var(--secondary-color)] md:px-8 px-4 py-2 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] w-full mt-2">Proceed to checkout</button></Link>
+                                <Link to='/checkout'><button className="border border-[var(--secondary-color)] md:px-8 px-4 py-2 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] w-full mt-2">Proceed to checkout</button></Link>
 
                                 <Link to='/products'><button className="border border-[var(--secondary-color)] md:px-8 px-4 py-2 hover:bg-[var(--secondary-color)] hover:text-white bg-transparent text-[var(--secondary-color)] w-full mt-2">Continue shopping</button></Link>
                             </div>

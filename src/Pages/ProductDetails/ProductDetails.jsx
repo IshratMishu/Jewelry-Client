@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineArrowRightAlt, MdOutlineShoppingCart } from "react-icons/md";
-import { useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { BiSolidPurchaseTag } from "react-icons/bi";
 import { IoMdHeartEmpty } from "react-icons/io";
 import QuantityBox from "../../Components/QuantityBox/QuantityBox";
@@ -11,11 +11,11 @@ import ReviewForm from "../../Components/ReviewForm/ReviewForm";
 import { Helmet } from "react-helmet-async";
 import useShoppingCart from "../../Hooks/useShoppingCart";
 
+
 const ProductDetails = () => {
     const {handleCart} = useShoppingCart();
     const { id } = useParams();
     const [details, setDetails] = useState([]);
-
 
     useEffect(() => {
         fetch(`http://localhost:5000/jewelries/${id}`)
@@ -23,6 +23,9 @@ const ProductDetails = () => {
             .then(data => setDetails(data))
     }, [id]);
 
+    const handleBuyNow = () => {
+        handleCart(details, true);
+    };
 
     return (
         <div className="mt-28">
@@ -53,7 +56,9 @@ const ProductDetails = () => {
                         <p>Availability: <span className="text-green-700">{details.availability}</span></p>
                         <QuantityBox></QuantityBox>
                         <button onClick={()=>handleCart(details)} className="border border-[var(--secondary-color)] w-52 py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium justify-center"><MdOutlineShoppingCart />Add to cart<MdOutlineArrowRightAlt /></button>
-                        <button className="border border-[var(--secondary-color)] py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium w-52 justify-center"><BiSolidPurchaseTag />Buy now<MdOutlineArrowRightAlt /></button>
+
+                       <button onClick={handleBuyNow} className="border border-[var(--secondary-color)] py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium w-52 justify-center mt-2"><BiSolidPurchaseTag />Buy now<MdOutlineArrowRightAlt /></button>
+                       
 
                         <p className="hover:text-[--secondary-color] flex items-center gap-1 underline cursor-pointer"><IoMdHeartEmpty className="text-[--secondary-color]" />Add to wishlist</p>
                     </div>

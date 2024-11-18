@@ -1,6 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
+import { Link } from 'react-router-dom';
 
 const Dropdown = () => {
     const { logOut, user } = useAuth();
@@ -28,8 +29,7 @@ const Dropdown = () => {
             </button>
             <ul className={`${open ? 'visible duration-300' : 'invisible'} absolute -right-5 top-12 w-40 bg-[--third-color] shadow-xl pl-6 space-y-2 py-4 font-medium`}>
                 <li className='hover:text-[--secondary-color]'>{user?.displayName || 'User'}</li>
-                <li className='hover:text-[--secondary-color]'>Dashboard</li>
-                <li className='hover:text-[--secondary-color]'>Edit Profile</li>
+                <li className='hover:text-[--secondary-color]'><Link to='/my-account'>Dashboard</Link></li>
                 <li onClick={logOut} className='hover:text-[--secondary-color]'>Logout</li>
             </ul>
         </div>

@@ -8,11 +8,14 @@ import { useEffect } from "react";
 import './nav2.css'
 import Dropdown from "./Dropdown";
 import useAuth from "../../Hooks/useAuth";
+import { IoMdHeartEmpty } from "react-icons/io";
+import useCart from "../../Hooks/useCart";
 
 
 const Nav2 = () => {
-    const {  user } = useAuth();
+    const { user } = useAuth();
     const location = useLocation();
+    const [cart] = useCart();
 
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
@@ -68,6 +71,13 @@ const Nav2 = () => {
                     </ul>
                 </div>
                 <div className="flex items-center gap-10">
+                  
+                   <div className="relative">
+                   <Link to='/my-account/wishlist'>
+                                <IoMdHeartEmpty className="text-2xl cursor-pointer hover:text-[--primary-color]" /> <p className={` ${cart.length ? 'opacity-100' : 'opacity-100'}bg-[--primary-color] text-black rounded-full px-1 text-xs absolute bottom-4 left-4 font-sans`}></p>
+                            </Link>
+                   </div>
+
                     <ShoppingCart></ShoppingCart>
                     {
                         user ?

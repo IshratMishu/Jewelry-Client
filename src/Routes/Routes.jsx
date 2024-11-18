@@ -13,9 +13,14 @@ import AllProducts from "../Pages/AllProducts/AllProducts";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import ShopByCategoryFilter from "../Pages/Sections/ShopByCategoryFilter/ShopByCategoryFilter";
 import ListSortCategoriesShop from "../Pages/ListSortCategoriesShop/ListSortCategoriesShop";
-import Dashboard from "../Layout/Dashboard/Dashboard";
 import Cart from "../Pages/Dashboard/Cart/Cart";
 import PrivateRoute from "./PrivateRoute";
+import Payment from "../Payments/Payment/Payment";
+import PaymentHistory from "../Payments/PaymentHistory/PaymentHistory";
+import DashboardPage from "../Pages/Dashboard/DashboardPage/DashboardPage";
+import EditAccount from "../Pages/Dashboard/EditAccount/EditAccount";
+import Wishlist from "../Pages/Dashboard/Wishlist/Wishlist";
+import Invoice from "../Pages/Dashboard/InvoicePage/Invoice";
 
 export const router = createBrowserRouter([
   {
@@ -68,20 +73,44 @@ export const router = createBrowserRouter([
       {
         path: "/cart",
         element: <PrivateRoute><Cart></Cart></PrivateRoute>
-      }
+      },
+      {
+        path: "/checkout",
+        element: <PrivateRoute><Payment></Payment></PrivateRoute>
+      },
+      {
+        path: "/my-account",
+        element: <PrivateRoute><DashboardPage></DashboardPage></PrivateRoute>
+      },
+      {
+        path: "/my-account/paymentHistory",
+        element: <PrivateRoute><PaymentHistory></PaymentHistory></PrivateRoute>
+      },
+      {
+        path: "/my-account/editAccount",
+        element: <PrivateRoute><EditAccount></EditAccount></PrivateRoute>
+      },
+      {
+        path: "/my-account/wishlist",
+        element: <PrivateRoute><Wishlist></Wishlist></PrivateRoute>
+      },
+      {
+        path: "/my-account/invoice",
+        element: <PrivateRoute><Invoice></Invoice></PrivateRoute>
+      },
     ],
   },
 
-  {
-    path: "dashboard",
-    element: <Dashboard></Dashboard>,
-    children: [
-      // {
-      //   path: "cart",
-      //   element: <Cart></Cart>
-      // }
-    ]
-  }
+  // {
+  //   path: "dashboard",
+  //   element: <PrivateRoute><DashboardPage></DashboardPage></PrivateRoute>,
+  //   children: [
+  //     {
+  //       path: "cart",
+  //       element: <Cart></Cart>
+  //     }
+  //   ]
+  // }
 ],
   {
     future: {

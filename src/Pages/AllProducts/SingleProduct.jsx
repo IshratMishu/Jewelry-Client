@@ -17,6 +17,9 @@ const SingleProduct = ({ product }) => {
     const { _id, name, image, price, availability, category } = product;
     const [openModal, setOpenModal] = useState(false);
 
+    const handleBuyNow = () => {
+        handleCart(product,true);
+    };
 
    
     return (
@@ -67,7 +70,7 @@ const SingleProduct = ({ product }) => {
                                             <p>Availability: <span className="text-green-700">{availability}</span></p>
                                             <QuantityBox></QuantityBox>
                                             <button onClick={()=>handleCart(product)} className="border border-[var(--secondary-color)] w-52 py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium justify-center"><MdOutlineShoppingCart />Add to cart<MdOutlineArrowRightAlt /></button>
-                                            <button className="border border-[var(--secondary-color)] py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium w-52 justify-center"><BiSolidPurchaseTag />Buy now<MdOutlineArrowRightAlt /></button>
+                                            <button onClick={handleBuyNow} className="border border-[var(--secondary-color)] py-1 bg-[var(--secondary-color)] text-white hover:bg-[--third-color] hover:text-[var(--secondary-color)] flex items-center gap-1 font-medium w-52 justify-center"><BiSolidPurchaseTag />Buy now<MdOutlineArrowRightAlt /></button>
                                             <p className="hover:text-[--secondary-color] flex items-center gap-1 underline cursor-pointer"><IoMdHeartEmpty className="text-[--secondary-color]" />Add to wishlist</p>
                                         </div>
                                     </div>
@@ -75,9 +78,6 @@ const SingleProduct = ({ product }) => {
                             </div>
                         </div>
                     </div>
-
-
-
                     <MdOutlineShoppingCart onClick={() => handleCart(product)} className="hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 cursor-pointer" />
                 </div>
             </div>

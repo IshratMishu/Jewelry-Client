@@ -11,9 +11,9 @@ const useShoppingCart = () => {
     const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
     const navigate = useNavigate();
-const [, refetch] = useCart();
+    const [, refetch] = useCart();
 
-    const handleCart = (product) => {
+    const handleCart = (product, navigateToCheckout=false) => {
         const { _id, name, image, price } = product;
         if (user && user.email) {
             const cartsItem = { jewelryId: _id, name, image, price, email: user.email }
@@ -24,6 +24,9 @@ const [, refetch] = useCart();
                     }
                     //refetch cart to update the cart count
                     refetch();
+                    if (navigateToCheckout) {
+                        navigate('/checkout');
+                    }
                 })
         }
         else {
