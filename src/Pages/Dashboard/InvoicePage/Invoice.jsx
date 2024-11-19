@@ -68,27 +68,27 @@ const Invoice = () => {
                             <table className="w-full">
                                 <thead className="bg-[--primary-color]">
                                     <tr>
-                                        <th className=" px-6 py-4 text-start">
+                                        <th className="px-6 py-2 text-start">
                                             Product
                                         </th>
-                                        <th className="px-1 py-4 text-start">Transaction Id</th>
-                                        <th className="px-6 py-4 text-start">Date</th>
-                                        <th className="px-4 py-4 text-start">Price</th>
+                                        <th className="px-1 py-2 text-start">Transaction Id</th>
+                                        <th className="px-6 py-2 text-start">Date</th>
+                                        <th className="px-4 py-2 text-start">Price</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
                                         payments.map(payment => <tr key={payment._id} className="border ">
-                                            <th className="px-6 py-4 text-start text-xs">
+                                            <td className="px-6 py-4 text-start text-xs">
                                                 {payment.productName}
-                                            </th>
-                                            <th className="px-1 py-4 text-start font-sans text-xs">{payment.transactionId}</th>
-                                            <th className="px-6 py-4 text-start font-sans text-xs">
+                                            </td>
+                                            <td className="px-1 py-4 text-start font-sans text-xs">{payment.transactionId}</td>
+                                            <td className="px-6 py-4 text-start font-sans text-xs">
                                                 {payment.date}
-                                            </th>
-                                            <th className="px-4 py-4 text-start font-sans text-xs">
+                                            </td>
+                                            <td className="px-4 py-4 text-start font-sans text-xs">
                                                 ${payment.price}
-                                            </th>
+                                            </td>
                                         </tr>)
                                     }
                                 </tbody>

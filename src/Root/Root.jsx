@@ -11,9 +11,9 @@ const Root = () => {
     return (
         <div>
            <Nav2></Nav2>
+           <Toaster />
             <Outlet></Outlet>
             <ScrollRestoration></ScrollRestoration>
-            <Toaster />
             <Footer></Footer>
         </div>
     );

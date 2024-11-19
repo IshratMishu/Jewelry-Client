@@ -26,16 +26,6 @@ const ShopByCategories = () => {
                     </div>
                 </Link>
 
-
-                {/* <Link to="/product-category/Necklace">
-               <div className="flex flex-col items-center group">
-                    <div className="bg-[--primary-color] h-32 w-28 group-hover:border group-hover:border-[--secondary-color] group-hover:bg-transparent transition-all duration-300">
-                        <GiDoubleNecklace className="mx-auto text-7xl mt-6 text-[--secondary-color]" />
-                    </div>
-                    <p className="pt-2 underline text-[--secondary-color]">NECKLACE</p>
-                </div>
-               </Link> */}
-
                 <Link to="/product-category/Necklace">
                     <div className="flex flex-col items-center group">
                         <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">

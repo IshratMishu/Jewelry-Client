@@ -30,30 +30,30 @@ const PaymentHistory = () => {
                         <table className="w-full">
                             <thead>
                                 <tr className="bg-[--primary-color]">
-                                    <th className="w-[50px] px-6 py-4 text-start">
+                                    <th className="w-[50px] px-6 py-2 text-start">
                                     </th>
-                                    <th className="px-4 py-4 text-start">Price</th>
-                                    <th className="px-1 py-4 text-start">Transaction Id</th>
-                                    <th className="px-6 py-4 text-start">Status</th>
-                                    <th className="px-6 py-4 text-start">Date</th>
+                                    <th className="px-4 py-2 text-start">Price</th>
+                                    <th className="px-1 py-2 text-start">Transaction Id</th>
+                                    <th className="px-6 py-2 text-start">Status</th>
+                                    <th className="px-6 py-2 text-start">Date</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
                                     payments.map((payment, index) => <tr key={payment._id} className=" border ">
-                                        <th className="px-6 py-4 text-start text-sm">
+                                        <td className="px-6 py-4 text-start text-sm">
                                             {index + 1}
-                                        </th>
-                                        <th className="px-4 py-4 text-start font-sans text-sm">
+                                        </td>
+                                        <td className="px-4 py-4 text-start font-sans text-sm">
                                             ${payment.price}
-                                        </th>
-                                        <th className="px-1 py-4 text-start font-sans text-sm">{payment.transactionId}</th>
-                                        <th className="px-6 py-4 text-start text-sm ">
+                                        </td>
+                                        <td className="px-1 py-4 text-start font-sans text-sm">{payment.transactionId}</td>
+                                        <td className="px-6 py-4 text-start text-sm ">
                                             <span className="bg-[--secondary-color] px-2 py-1 text-white">{payment.status}</span>
-                                        </th>
-                                        <th className="px-6 py-4 text-start font-sans text-sm">
+                                        </td>
+                                        <td className="px-6 py-4 text-start font-sans text-sm">
                                             {payment.date}
-                                        </th>
+                                        </td>
                                     </tr>)
                                 }
 

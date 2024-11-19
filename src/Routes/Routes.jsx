@@ -22,6 +22,13 @@ import EditAccount from "../Pages/Dashboard/EditAccount/EditAccount";
 import Wishlist from "../Pages/Dashboard/Wishlist/Wishlist";
 import Invoice from "../Pages/Dashboard/InvoicePage/Invoice";
 import WelcomeMessage from "../Pages/Dashboard/WelcomeMessage/WelcomeMessage";
+import Dashboard from "../Layout/Dashboard/Dashboard";
+import AdminHome from "../AdminDashboard/AdminHome/AdminHome";
+import ManageUsers from "../AdminDashboard/ManageUsers/ManageUsers";
+import ManageCategory from "../AdminDashboard/ManageCategory/ManageCategory";
+import ManagePayment from "../AdminDashboard/ManagePayment/ManagePayment";
+import SellerHome from "../SellerDashboard/SellerHome/SellerHome";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
   {
@@ -106,16 +113,35 @@ export const router = createBrowserRouter([
     ],
   },
 
-  // {
-  //   path: "dashboard",
-  //   element: <PrivateRoute><DashboardPage></DashboardPage></PrivateRoute>,
-  //   children: [
-  //     {
-  //       path: "cart",
-  //       element: <Cart></Cart>
-  //     }
-  //   ]
-  // }
+  {
+    path: "dashboard",
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children: [
+      // admin dashboard
+      {
+        path: "adminHome",
+        element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+      },
+      {
+        path: "manageUsers",
+        element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
+      },
+      {
+        path: "manageCategory",
+        element: <AdminRoute><ManageCategory></ManageCategory></AdminRoute>
+      },
+      {
+        path: "managePayment",
+        element: <AdminRoute><ManagePayment></ManagePayment></AdminRoute>
+      },
+
+      // seller dashboard
+      {
+        path: "sellerHome",
+        element: <SellerHome></SellerHome>
+      },
+    ]
+  }
 ],
   {
     future: {
