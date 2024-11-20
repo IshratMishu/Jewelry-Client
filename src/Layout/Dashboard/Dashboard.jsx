@@ -34,7 +34,7 @@ const [isAdmin] = useAdmin();
                                     <NavLink to='/dashboard/manageUsers' className="text-white flex items-center gap-2  px-4 py-2" style={linkStyle}><FaUsersRectangle />Manage Users</NavLink>
                                 </li>
 
-                                <li><NavLink to='/dashboard/manageCategory' className='text-white flex items-center gap-2 px-4 py-2' style={linkStyle}><MdCategory />Manage Category</NavLink></li>
+                                <li><NavLink to='/dashboard/manageProducts' className='text-white flex items-center gap-2 px-4 py-2' style={linkStyle}><MdCategory />Manage Products</NavLink></li>
 
                                 <li>
                                     <NavLink to='/dashboard/managePayment' className="text-white flex items-center gap-2 px-4 py-2" style={linkStyle}>
@@ -61,10 +61,10 @@ const [isAdmin] = useAdmin();
                                     <NavLink style={linkStyle} to='/dashboard/sellerHome' className="text-white flex items-center gap-2 px-4 py-2"><FaHome />Seller Home</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink style={linkStyle} to='/dashboard/manageProducts' className="text-white flex items-center gap-2 px-4 py-2"><SiGooglecampaignmanager360 />Manage Products</NavLink>
+                                    <NavLink style={linkStyle} to='/dashboard/manageJewelries' className="text-white flex items-center gap-2 px-4 py-2"><SiGooglecampaignmanager360 />Manage Products</NavLink>
                                 </li>
 
-                                <li><NavLink style={linkStyle} to='/dashboard/sellerPayment' className='text-white flex items-center gap-2 px-4 py-2'><SiContactlesspayment />Payment History</NavLink></li>
+                                <li><NavLink style={linkStyle} to='/dashboard/sellerPaymentHistory' className='text-white flex items-center gap-2 px-4 py-2'><SiContactlesspayment />Payment History</NavLink></li>
 
                                 <li>
                                     <NavLink style={linkStyle} to='/dashboard/ads' className="text-white flex items-center gap-2 px-4 py-2">

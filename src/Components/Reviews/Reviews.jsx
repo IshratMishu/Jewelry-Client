@@ -11,7 +11,7 @@ import { FaStar } from "react-icons/fa";
 
 const Reviews = () => {
     return (
-        <div className='mt-20 bg-[--primary-color] p-10'>
+        <div className='mt-28 bg-[--primary-color] p-10'>
             <h1 className='text-3xl font-medium text-center'>Clients Testimonials</h1>
             <p className='text-center pb-10 text-[--secondary-color]'>──────</p>
             <Swiper

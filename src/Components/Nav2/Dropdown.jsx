@@ -2,11 +2,13 @@
 import { useEffect, useRef, useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
 import { Link } from 'react-router-dom';
+import useSeller from '../../Hooks/useSeller';
 
 const Dropdown = () => {
     const { logOut, user } = useAuth();
     const [open, setOpen] = useState(false);
     const dropDownRef = useRef(null);
+    const [isSeller] = useSeller();
 
 
     useEffect(() => {
@@ -30,8 +32,12 @@ const Dropdown = () => {
             <ul className={`${open ? 'visible duration-300' : 'invisible'} absolute -right-5 top-12 w-48 bg-[--third-color] shadow-xl space-y-2 p-4 font-medium`}>
                 <li className='hover:text-[--secondary-color]'>{user?.displayName || 'User'}</li>
                 <li className='hover:text-[--secondary-color]'><Link to='/my-account'>My Account</Link></li>
-                <li className='hover:text-[--secondary-color]'><Link to='/my-account'>Dashboard</Link></li>
-   
+                <li className='hover:text-[--secondary-color]'>{
+                    isSeller ? <Link to='/dashboard/sellerHome'>Seller Dashboard</Link>
+                        :
+                        <Link to='/signup'>Become a Seller</Link>
+                }</li>
+
                 <li onClick={logOut} className='hover:text-[--secondary-color]'>Logout</li>
             </ul>
         </div>

@@ -8,7 +8,8 @@ import { useState } from "react";
 
 const Cart = () => {
     const [cart, refetch] = useCart();
-    const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+    const totalPrice = cart.reduce((total, item) => total + Number(item.price), 0);
+
 
     const axiosSecure = useAxiosSecure();
     const handleDelete = id => {

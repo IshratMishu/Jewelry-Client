@@ -58,7 +58,11 @@ const SignUp = () => {
                         axiosPublic.post("/users", userInfo).then((res) => {
                             if (res.data?.insertedId) {
                                 toast.success("Sign Up Success");
-                                navigate(from);
+                                if (userInfo.role === "seller") {
+                                    navigate('/dashboard/sellerHome');
+                                } else {
+                                    navigate(from);
+                                }
                             }
                         });
                     });

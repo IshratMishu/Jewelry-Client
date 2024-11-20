@@ -7,6 +7,7 @@ import Blog from "../Sections/Blog/Blog";
 import Reviews from "../../Components/Reviews/Reviews";
 import TabProducts from "../Sections/TabProducts/TabProducts";
 import ShopByCategories from "../Sections/ShopByCategories/ShopByCategories";
+import FooterLast from "../Sections/FooterLast/FooterLast";
 
 
 const Home = () => {
@@ -21,8 +22,9 @@ const Home = () => {
             <TabProducts></TabProducts>
             <HerHim></HerHim>
             <ShopByCategories></ShopByCategories>
-            <Blog></Blog>
             <Reviews></Reviews>
+            <Blog></Blog>
+            <FooterLast></FooterLast>
         </div>
     );
 };

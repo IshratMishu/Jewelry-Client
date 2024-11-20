@@ -18,7 +18,8 @@ const CheckoutForm = () => {
     const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
     const navigate = useNavigate();
-    const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+    const totalPrice = cart.reduce((total, item) => total + Number(item.price), 0);
+
  
 
     useEffect(() => {
@@ -77,6 +78,7 @@ const CheckoutForm = () => {
                 //save the payment in the database
                 const payment = {
                     email: user.email,
+                    sellerEmail: cart.map(item => item.sellerEmail),
                     price: totalPrice,
                     transactionId: paymentIntent.id,
                     date: moment().format("DD/MM/YYYY HH:mm:ss"), //try moment js for utc time convert

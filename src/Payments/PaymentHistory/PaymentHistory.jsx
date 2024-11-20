@@ -48,8 +48,10 @@ const PaymentHistory = () => {
                                             ${payment.price}
                                         </td>
                                         <td className="px-1 py-4 text-start font-sans text-sm">{payment.transactionId}</td>
-                                        <td className="px-6 py-4 text-start text-sm ">
-                                            <span className="bg-[--secondary-color] px-2 py-1 text-white">{payment.status}</span>
+
+                                        <td className="px-4 py-4 text-start text-sm">
+                                            <span
+                                                className={` py-1 ${payment.status === 'paid' ? 'bg-[--primary-color] text-black font-semibold px-5' : 'bg-[--secondary-color] text-white px-2'}`}>{payment.status}</span>
                                         </td>
                                         <td className="px-6 py-4 text-start font-sans text-sm">
                                             {payment.date}

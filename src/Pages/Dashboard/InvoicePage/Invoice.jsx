@@ -21,7 +21,8 @@ const Invoice = () => {
             return res.data;
         }
     })
-    const totalPrice = payments.reduce((total, item) => total + item.price, 0);
+    const totalPrice = payments.reduce((total, item) => total + Number(item.price), 0);
+
 
     const handleDownloadPDF = () => {
         const invoiceElement = document.getElementById("invoice-content");
@@ -80,7 +81,7 @@ const Invoice = () => {
                                     {
                                         payments.map(payment => <tr key={payment._id} className="border ">
                                             <td className="px-6 py-4 text-start text-xs">
-                                                {payment.productName}
+                                            {payment.productName[0]} × {payment.productName.length}
                                             </td>
                                             <td className="px-1 py-4 text-start font-sans text-xs">{payment.transactionId}</td>
                                             <td className="px-6 py-4 text-start font-sans text-xs">

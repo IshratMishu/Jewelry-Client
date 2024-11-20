@@ -14,9 +14,9 @@ const useShoppingCart = () => {
     const [, refetch] = useCart();
 
     const handleCart = (product, navigateToCheckout=false) => {
-        const { _id, name, image, price } = product;
+        const { _id, name, image, price , sellerEmail} = product;
         if (user && user.email) {
-            const cartsItem = { jewelryId: _id, name, image, price, email: user.email }
+            const cartsItem = { jewelryId: _id, name, image, price, email: user.email, sellerEmail}
             axiosSecure.post('/carts', cartsItem)
                 .then(res => {
                     if (res.data.insertedId) {

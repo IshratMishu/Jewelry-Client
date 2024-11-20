@@ -22,13 +22,18 @@ import EditAccount from "../Pages/Dashboard/EditAccount/EditAccount";
 import Wishlist from "../Pages/Dashboard/Wishlist/Wishlist";
 import Invoice from "../Pages/Dashboard/InvoicePage/Invoice";
 import WelcomeMessage from "../Pages/Dashboard/WelcomeMessage/WelcomeMessage";
-import Dashboard from "../Layout/Dashboard/Dashboard";
 import AdminHome from "../AdminDashboard/AdminHome/AdminHome";
 import ManageUsers from "../AdminDashboard/ManageUsers/ManageUsers";
 import ManageCategory from "../AdminDashboard/ManageCategory/ManageCategory";
 import ManagePayment from "../AdminDashboard/ManagePayment/ManagePayment";
 import SellerHome from "../SellerDashboard/SellerHome/SellerHome";
 import AdminRoute from "./AdminRoute";
+import UpdateProduct from "../AdminDashboard/UpdateProduct/UpdateProduct";
+import SalesReport from "../AdminDashboard/SalesReport/SalesReport";
+import Dashboard from "../Layout/Dashboard/Dashboard";
+import ManageJewelries from "../SellerDashboard/ManageJewelries/ManageJewelries";
+import SellerRoute from "./SellerRoute";
+import SellerPaymentHistory from "../SellerDashboard/SellerPaymentHistory/SellerPaymentHistory";
 
 export const router = createBrowserRouter([
   {
@@ -127,18 +132,35 @@ export const router = createBrowserRouter([
         element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
       },
       {
-        path: "manageCategory",
+        path: "manageProducts",
         element: <AdminRoute><ManageCategory></ManageCategory></AdminRoute>
+      },
+      {
+        path: "updateProduct/:id",
+        element: <AdminRoute><UpdateProduct></UpdateProduct></AdminRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/jewelries/${params.id}`)
       },
       {
         path: "managePayment",
         element: <AdminRoute><ManagePayment></ManagePayment></AdminRoute>
       },
+      {
+        path: "salesReport",
+        element: <AdminRoute><SalesReport></SalesReport></AdminRoute>
+      },
 
       // seller dashboard
       {
         path: "sellerHome",
-        element: <SellerHome></SellerHome>
+        element: <SellerRoute><SellerHome></SellerHome></SellerRoute>
+      },
+      {
+        path: "manageJewelries",
+        element: <SellerRoute><ManageJewelries></ManageJewelries></SellerRoute>
+      },
+      {
+        path: "sellerPaymentHistory",
+        element: <SellerRoute><SellerPaymentHistory></SellerPaymentHistory></SellerRoute>
       },
     ]
   }

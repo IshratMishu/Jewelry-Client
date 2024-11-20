@@ -11,7 +11,7 @@ import amazon from '../../assets/amazon.png';
 import { GrSend } from "react-icons/gr";
 const Footer = () => {
     return (
-        <div className="mt-28">
+        <div>
             <hr className="py-6" />
             <div className="flex items-center justify-between">
                 <div className="space-y-4">
