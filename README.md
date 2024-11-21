@@ -24,55 +24,10 @@ Website:**
 
 
 
-Authentication ad User Registration:
-Sign-Up:
-Fields: Username, Email, Photo Upload, Password, Role (User/Seller).
-Login:
-
-Fields: Email, Password.
-Social Login:
-
-Shop Page Features:
-Medicine Display:
-Tabular format showing all medicines.
-Actions:
-Eye Button: Displays detailed info in a modal with image.
-Select Button: Adds medicine to the cart.
-Category Details Page:
-Displays medicines of a specific category in tabular format.
-Same actions as Shop Page (Eye Button, Select Button).
-Cart Page:
-Displays selected medicines with details (name, company, price/unit, quantity).
-Actions:
-Adjust Quantity, Remove Item, Clear Cart.
-Checkout Button for payment navigation.
-Checkout and Invoice Pages:
-Checkout:
-Stripe payment integration for grand total.
-Invoice:
-Displays user and purchase information.
-Includes a print/download button for PDF.
-Admin Dashboard Features:
-Manage Users:
-Promote/Demote users (to Seller/Admin or back to User).
-Manage Categories:
-Add/Update/Delete categories (using a modal form).
-Payment Management:
-Accept pending payments.
-Sales Report:
-Filterable by date range, exportable to PDF/Excel.
-Manage Advertisements:
-Toggle medicines for homepage slider.
-Seller Dashboard Features:
-Manage Medicines:
-Add/Edit/Delete medicines with input fields for all details.
-Payment History:
-View purchase history of medicines with statuses.
-Advertise Request:
-Propose medicines for advertisement on the slider.
-User Dashboard Features:
-Payment History:
-View transaction details with status (Paid/Pending).
+| Medicine Name | Transaction ID   | Amount | Status   |
+| ------------- | ---------------- | ------ | -------- |
+| Paracetamol   | TX12345          | $10.00 | Paid     |
+| Amoxicillin   | TX67890          | $15.50 | Pending  |
 
 ___
 **Server Side:** https://github.com/IshratMishu/Jewelry-Server
