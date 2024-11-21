@@ -6,7 +6,7 @@
 **I have created a simple e-commerce web application about 'Jewelry Store'. Features and Characteristics of my
 Website:**
 
-- User Dashboard:
+### User Dashboard:
   
   **1.Wishlist:** User can see wishlist added products & can remove if needed.
   
