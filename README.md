@@ -1,5 +1,5 @@
 # Website Name: Moice Jewelry
-**I have created a simple Jewelry Store E-Commerce Website. I used React.Js, Tailwind for frontend & Node.js, Express.js for backend. There is User Dahsboard, Seller Dashboard & Admin Dashboard. This website is responsive for all devices.**
+**I have created a simple E-Commerce Website focused on a Jewelry Store. I used React.Js, Tailwind for frontend & Node.js, Express.js for backend. There is User Dahsboard, Seller Dashboard & Admin Dashboard. This website is responsive for all devices.**
 
 **Live Site URL:** https://moice-jewelry.web.app/
 
