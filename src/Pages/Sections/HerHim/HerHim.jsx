@@ -4,7 +4,7 @@ import Button from '../../../Components/Button/Button';
 
 const HerHim = () => {
     return (
-        <div className='md:mt-28 mt-80'>
+        <div className='md:mt-28 mt-[550px]'>
             <div className='flex flex-col-reverse pb-5 md:pb-0 md:flex-row items-center justify-center gap-10'>
                 <img src={img1} alt="" className='h-80 w-72 object-cover bg-[--primary-color]' />
                 <div>

@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import useProducts from '../../../Hooks/useProducts';
+import SingleProduct from '../../AllProducts/SingleProduct';
+import { useMediaQuery } from 'react-responsive';
 import TabProductCards from '../TabProductCards/TabProductCards';
 
 const TabProducts = () => {
     const [activeTab, setActiveTab] = useState("Rings");
-
+    const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
     const handleTab = (tab) => {
         setActiveTab(tab);
     }
@@ -35,8 +37,10 @@ const TabProducts = () => {
                 {/* Tab Content */}
                 <div className='mt-10'>
                     {activeTab === "Rings" && (
-                        <div className='grid md:grid-cols-3 grid-cols-2 gap-5'>
-                            {
+                        <div className='grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-3 md:pl-0 pl-3'>
+                            {isMobile ?
+                                rings.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
+                                :
                                 rings.map(product => <TabProductCards key={product._id} product={product}></TabProductCards>)
                             }
 
@@ -45,8 +49,10 @@ const TabProducts = () => {
 
 
                     {activeTab === "Earrings" && (
-                        <div className='grid md:grid-cols-3 grid-cols-2 gap-5'>
-                            {
+                        <div className='grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-3 md:pl-0 pl-3'>
+                            {isMobile ?
+                                earrings.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
+                                :
                                 earrings.map(product => <TabProductCards key={product._id} product={product}></TabProductCards>)
                             }
 
@@ -55,11 +61,12 @@ const TabProducts = () => {
 
 
                     {activeTab === "Necklace" && (
-                        <div className='grid md:grid-cols-3 grid-cols-2 gap-5'>
-                            {
+                        <div className='grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-3 md:pl-0 pl-3'>
+                            {isMobile ?
+                                necklace.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
+                                :
                                 necklace.map(product => <TabProductCards key={product._id} product={product}></TabProductCards>)
                             }
-
                         </div>
                     )}
                 </div>
