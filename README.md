@@ -19,6 +19,8 @@ Website:**
   
   **4.Account details:** User can change his name after sign up if needed.
 
+  - **Payment History:**
+
 
 
 
