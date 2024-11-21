@@ -26,11 +26,11 @@ const SingleProduct = ({ product }) => {
 
     return (
         <div>
-            <div className='border items-center hover:border-[--secondary-color] transition-all duration-300 relative md:h-72 h-60 md:w-56 w-36 group'>
-                <Link to={`/productDetail/${_id}`}><img src={image} alt="" className='md:w-52 w-24 h-24 md:h-44 object-cover transition-transform hover:scale-110 md:p-3 pt-2 mx-auto' />
+            <div className='border items-center hover:border-[--secondary-color] transition-all duration-300 relative group'>
+                <Link to={`/productDetail/${_id}`}><img src={image} alt="" className='object-cover transition-transform hover:scale-110 md:p-3 pt-2 mx-auto max-w-24 md:max-w-40 lg:max-w-52 max-h-24 md:max-h-40 lg:max-h-52' />
                 </Link>
                 <div className='space-y-1 p-2'>
-                    <p className='font-medium'>{name}</p>
+                    <p className='font-medium text-ellipsis whitespace-nowrap overflow-hidden'>{name}</p>
                     <p className='text-xs text-green-700'>{availability}</p>
                     <div className='flex items-center text-sm text-[--secondary-color]'>
                         <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
@@ -41,9 +41,6 @@ const SingleProduct = ({ product }) => {
                 <div className="absolute flex flex-col items-center opacity-0 group-hover:opacity-100 transition-all duration-200 delay-100 gap-3 top-16 right-2">
 
                     <IoMdHeartEmpty onClick={() => handleWishlist(product)} className="hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 cursor-pointer" />
-                    {/* <Link>
-                <PiEyes className="bg-[--primary-color] hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 transition-all duration-300 cursor-pointer shadow shadow-[--secondary-color]" />
-                </Link> */}
 
                     <div className="mx-auto w-fit">
                         <PiEyes onClick={() => setOpenModal(true)} className="hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 cursor-pointer" />

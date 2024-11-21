@@ -24,8 +24,8 @@ const TabProductCards = ({ product }) => {
 
     return (
         <div>
-            <div className='flex border items-center hover:border-[--secondary-color] transition-all duration-300 relative md:h-32 h-44 group'>
-                <Link to={`/productDetail/${_id}`}><img src={image} alt="" className='md:w-32 md:h-28 h-24 w-24 md:object-cover transition-transform hover:scale-110 md:p-3 p-1' />
+            <div className='flex border items-center hover:border-[--secondary-color] transition-all duration-300 relative group md:h-32 h-44'>
+                <Link to={`/productDetail/${_id}`}><img src={image} alt="" className='md:w-32 md:h-28 h-24 w-24 md:object-cover transition-transform hover:scale-110 md:p-3 p-1'/>
                 </Link>
                 <div className='space-y-1'>
                     <p className='font-medium'>{name}</p>

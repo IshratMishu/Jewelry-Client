@@ -78,20 +78,20 @@ const Footer = () => {
 
             </div>
 
-            <hr className="lg:mt-8 lg:mb-8" />
+            <hr className="lg:mt-8 lg:mb-8 mb-5 mt-5" />
 
             <div className="flex lg:flex-row flex-col lg:justify-between items-center">
                 <div>
-                    <div className="flex items-center gap-2 mt-10 mb-6">
+                    <div className="lg:flex items-center gap-2 mt-10 mb-6 hidden">
                         <img src={bkash} alt="bkash" className="w-20 h-10 px-1 py-2 bg-[--secondary-color] object-cover" />
                         <img src={visa} alt="visa" className="w-20 h-10 px-1 py-2 object-cover bg-[--secondary-color]" />
                         <img src={amazon} alt="visa" className="w-20 h-10 px-1 py-2 bg-[--secondary-color] object-cover" />
                     </div>
-                    <p className="text-lg">Copyright <span className="text-[--secondary-color]">©</span> <span className="font-sans">2024</span> Moice. All Rights Reserved</p>
+                    <p className="text-lg lg:text-start text-center">Copyright <span className="text-[--secondary-color]">©</span> <span className="font-sans">2024</span> Moice. All Rights Reserved</p>
                 </div>
                 <div className="">
-                    <h3 className="text-lg font-medium mb-1 lg:text-end text-center">Subscribe to our newsletter</h3>
-                    <div className="relative flex items-center cursor-pointer md:justify-end mx-auto">
+                    <h3 className="text-lg font-medium mb-1 lg:text-end text-center lg:block hidden">Subscribe to our newsletter</h3>
+                    <div className="relative lg:flex items-center cursor-pointer md:justify-end mx-auto hidden">
                         <input type="search" className="px-6 w-64 md:w-96 py-2 border border-[--secondary-color] focus:outline-none bg-[#FAFAF4]" placeholder="Your email address" />
                         <GrSend className="absolute right-1 text-[var(--secondary-color)] text-4xl p-2" />
                     </div>

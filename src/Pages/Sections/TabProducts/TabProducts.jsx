@@ -37,7 +37,7 @@ const TabProducts = () => {
                 {/* Tab Content */}
                 <div className='mt-10'>
                     {activeTab === "Rings" && (
-                        <div className='grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-3 md:pl-0 pl-3'>
+                        <div className='grid md:grid-cols-3 grid-cols-2 gap-5'>
                             {isMobile ?
                                 rings.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
                                 :
@@ -49,7 +49,7 @@ const TabProducts = () => {
 
 
                     {activeTab === "Earrings" && (
-                        <div className='grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-3 md:pl-0 pl-3'>
+                        <div className='grid md:grid-cols-3 grid-cols-2 gap-5'>
                             {isMobile ?
                                 earrings.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
                                 :
@@ -61,7 +61,7 @@ const TabProducts = () => {
 
 
                     {activeTab === "Necklace" && (
-                        <div className='grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-3 md:pl-0 pl-3'>
+                        <div className='grid md:grid-cols-3 grid-cols-2 gap-5'>
                             {isMobile ?
                                 necklace.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
                                 :

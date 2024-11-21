@@ -36,7 +36,7 @@ const AllProducts = () => {
 
                 <hr />
 
-                <div className="mt-4 grid lg:grid-cols-3 grid-cols-2 gap-5">
+                <div className="mt-4 grid md:grid-cols-3 grid-cols-2 gap-5">
                     {viewMode === 'grid'
                         ?
                         products.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>
