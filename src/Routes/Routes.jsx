@@ -60,7 +60,7 @@ export const router = createBrowserRouter([
       {
         path: "/product-category/:category", 
         element: <ShopByCategoryFilter />,
-        loader: ({ params }) => fetch(`http://localhost:5000/jewelry/${params.category}`)
+        loader: ({ params }) => fetch(`https://jewelry-shop-server-five.vercel.app/jewelry/${params.category}`)
     },
     
       {
@@ -138,7 +138,7 @@ export const router = createBrowserRouter([
       {
         path: "updateProduct/:id",
         element: <AdminRoute><UpdateProduct></UpdateProduct></AdminRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/jewelries/${params.id}`)
+        loader: ({params}) => fetch(`https://jewelry-shop-server-five.vercel.app/jewelries/${params.id}`)
       },
       {
         path: "managePayment",

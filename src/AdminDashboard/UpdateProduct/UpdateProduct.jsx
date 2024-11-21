@@ -50,8 +50,8 @@ const UpdateProduct = () => {
             <div>
                 <h1 className="font-semibold pb-5 text-lg">Update <span className="text-sm text-[--secondary-color]">{name}</span></h1>
                 <form className="w-full space-y-6 border p-8" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="flex w-full items-center gap-10">
-                        <div className="space-y-2 text-sm w-1/2">
+                    <div className="flex md:flex-row flex-col w-full items-center gap-10">
+                        <div className="space-y-2 text-sm md:w-1/2 w-full">
                             <label className="block font-medium">
                                 Product Name
                             </label>
@@ -63,7 +63,7 @@ const UpdateProduct = () => {
                             />
                         </div>
 
-                        <div className="space-y-2 text-sm w-1/2">
+                        <div className="space-y-2 text-sm md:w-1/2 w-full">
                             <label className="block font-medium">
                                 Category
                             </label>
@@ -79,8 +79,8 @@ const UpdateProduct = () => {
                         </div>
                     </div>
 
-                    <div className="flex w-full items-center gap-10">
-                    <div className="space-y-2 text-sm w-1/2">
+                    <div className="flex md:flex-row flex-col w-full items-center gap-10">
+                    <div className="space-y-2 text-sm md:w-1/2 w-full">
                         <label className="block font-medium">
                             Price
                         </label>
@@ -92,7 +92,7 @@ const UpdateProduct = () => {
                         />
                     </div>
 
-                    <div className="space-y-2 text-sm w-1/2">
+                    <div className="space-y-2 text-sm md:w-1/2 w-full">
                         <label className="block font-medium">
                             Availability
                         </label>
@@ -107,7 +107,7 @@ const UpdateProduct = () => {
 
 
                    <div className="flex justify-center">
-                   <div className="space-y-2 text-sm w-1/2">
+                   <div className="space-y-2 text-sm md:w-1/2 w-full">
                         <label className="block font-medium">
                             Upload Image
                         </label>

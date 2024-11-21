@@ -16,7 +16,7 @@
 //     const { id } = useParams();
 
 //     useEffect(() => {
-//         fetch(`http://localhost:5000/jewelries/${id}`)
+//         fetch(`https://jewelry-shop-server-five.vercel.app/jewelries/${id}`)
 //             .then(res => res.json())
 //             .then(data => setDetaills(data))
 //     }, [id]);

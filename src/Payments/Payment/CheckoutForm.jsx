@@ -20,7 +20,7 @@ const CheckoutForm = () => {
     const navigate = useNavigate();
     const totalPrice = cart.reduce((total, item) => total + Number(item.price), 0);
 
- 
+
 
     useEffect(() => {
         if (totalPrice > 0) {
@@ -100,12 +100,12 @@ const CheckoutForm = () => {
 
     return (
         <div>
-       <Helmet>
+            <Helmet>
                 <title>Checkout - Moice Jewelry</title>
             </Helmet>
             <h1 className="text-2xl font-medium">CHECKOUT</h1>
-            <div className="flex mt-8 gap-10">
-                <div className="bg-[--primary-color] px-10 py-8 w-1/2">
+            <div className="flex lg:flex-row flex-col mt-8 gap-10">
+                <div className="bg-[--primary-color] lg:px-10 lg:py-8 md:px-28 py-10 px-6 lg:w-1/2">
                     <h1 className="font-semibold pb-5">Billing Details</h1>
                     <form className="space-y-5">
                         <div className="flex gap-10">
@@ -141,7 +141,7 @@ const CheckoutForm = () => {
                     </form>
                 </div>
 
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                     <div>
                         <h1 className="font-semibold pb-3">Order Summery</h1>
                         <div>

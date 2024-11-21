@@ -19,11 +19,11 @@ const AllProducts = () => {
                 <title>Shop - Moice Jewelry</title>
             </Helmet>
 
-            <div className="w-[20%] space-y-5">
+            <div className="md:w-[20%] space-y-5 md:block hidden">
                 <PriceRange></PriceRange>
                 <CategoriesSort></CategoriesSort>
             </div>
-            <div className="w-[80%]">
+            <div className="lg:w-[80%] w-full">
 
                 <div className="flex items-center gap-8 mb-2">
                     <SlGrid className={` ${viewMode === 'grid' ? 'text-[--secondary-color]' : 'hover:text-[--secondary-color]'}`}
@@ -36,7 +36,7 @@ const AllProducts = () => {
 
                 <hr />
 
-                <div className="mt-4 grid grid-cols-3 gap-5">
+                <div className="mt-4 grid lg:grid-cols-3 grid-cols-2 gap-5">
                     {viewMode === 'grid'
                         ?
                         products.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>

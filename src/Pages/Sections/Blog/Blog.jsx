@@ -8,18 +8,18 @@ const Blog = () => {
         <div className='mt-28'>
             <p className='text-center font-medium text-2xl'>Latest News</p>
             <p className='text-center pb-2 text-[--secondary-color]'>──────</p>
-            <div className="flex items-center gap-5 justify-center cursor-pointer">
+            <div className="flex md:flex-row flex-col items-center gap-5 justify-center cursor-pointer">
                 <div className='space-y-2'>
-                    <div className='group h-44 w-80 relative'>
+                    <div className='group lg:h-44 lg:w-80 md:w-60 h-36 w-64 relative'>
                         <img src={img1} alt="" className='h-full w-full object-cover' />
                         <div className='bg-[--primary-color] opacity-0 group-hover:opacity-35 transition-all duration-300 absolute top-0 left-0 w-full h-full'></div>
                     </div>
-                    <p className='text-xs'>November 2, 2024 - by Ram M - MoiceJewelry</p>
+                    <p className='text-xs'>November 2, 2024 - by Ram - MoiceJewelry</p>
                     <h1 className='text-lg font-medium hover:text-[--secondary-color]'>Diamond for casual wear</h1>
                     <p className='text-sm underline text-[--secondary-color]'>Read More</p>
                 </div>
                 <div className='space-y-2'>
-                    <div className='group h-44 w-80 relative'>
+                    <div className='group lg:h-44 lg:w-80 md:w-52 h-36 w-64 relative'>
                         <img src={img2} alt="" className='h-full w-full object-cover' />
                         <div className='bg-[--primary-color] opacity-0 group-hover:opacity-35 transition-all duration-300 absolute top-0 left-0 w-full h-full'></div>
                     </div>
@@ -28,7 +28,7 @@ const Blog = () => {
                     <p className='text-sm underline text-[--secondary-color]'>Read More</p>
                 </div>
                 <div className='space-y-2'>
-                    <div className='group h-44 w-80 relative'>
+                    <div className='group lg:h-44 lg:w-80 md:w-52 h-36 w-64 relative'>
                         <img src={img3} alt="" className='h-full w-full object-cover' />
                         <div className='bg-[--primary-color] opacity-0 group-hover:opacity-35 transition-all duration-300 absolute top-0 left-0 w-full h-full'></div>
                     </div>

@@ -56,8 +56,8 @@ const ManageJewelries = () => {
         <div >
             <h1 className="text-xl pb-5">Add your product...</h1>
 
-            <form className="space-y-6 border p-6" onSubmit={handleSubmit(onSubmit)}>
-                <div className="grid grid-cols-2 gap-4">
+            <form className="space-y-6 border p-2 md:p-6" onSubmit={handleSubmit(onSubmit)}>
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                     <div className="space-y-2 text-sm">
                         <label className="text-sm font-medium">
                             Product Name
@@ -88,7 +88,7 @@ const ManageJewelries = () => {
                 </div>
 
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                     <div className="space-y-2 text-sm">
                         <label className="text-sm font-medium" >
                             Price
@@ -110,7 +110,7 @@ const ManageJewelries = () => {
                 </div>
 
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                     <div className="space-y-2 text-sm">
                         <label className="text-sm font-medium">
                             Brand

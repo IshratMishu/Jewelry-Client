@@ -2,7 +2,7 @@ import { TfiAngleRight } from "react-icons/tfi";
 
 const CategoriesMenu = () => {
     return (
-        <div className="w-64 h-[26rem] bg-[--primary-color]">
+        <div className="w-64 h-[26rem] bg-[--primary-color] hidden lg:block">
             <ul className="space-y-1 p-2">
                 <li className="flex items-center justify-between font-medium hover:text-[--secondary-color] bg-[--third-color] px-4 py-2 relative group">Bracelet<TfiAngleRight />
                     <ul className="absolute top-0 left-full bg-[--third-color] text-black invisible group-hover:visible transition-all px-10 py-6 shadow-md z-10 w-96">

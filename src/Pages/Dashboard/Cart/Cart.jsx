@@ -48,9 +48,9 @@ const Cart = () => {
                         <Link to='/products'><button className="border border-[var(--secondary-color)] md:px-8 px-4 py-2 hover:bg-[var(--secondary-color)] hover:text-white bg-transparent text-[var(--secondary-color)] mt-2 mx-auto">Return to Shop</button></Link>
                     </div>
                     :
-                    <div className="flex gap-5 mt-5">
+                    <div className="flex lg:flex-row flex-col gap-5 mt-5">
                         {/* table products */}
-                        <div className="overflow-x-auto w-[75%] ">
+                        <div className="overflow-x-auto lg:w-[75%]">
                             <table className="w-full">
                                 <thead>
                                     <tr>
@@ -69,13 +69,13 @@ const Cart = () => {
                                                 <RxCross2 onClick={() => handleDelete(item._id)} />
                                             </th>
                                             <th className="px-4 py-4 text-start">
-                                                <img className="h-[44px] w-[44px] bg-slate-500 object-cover" src={item.image} />
+                                                <img className="h-[44px] w-[44px] object-cover" src={item.image} />
                                             </th>
                                             <th className="px-1 py-4 text-start ">{item.name}</th>
                                             <th className="px-6 py-4 text-start">
                                                 <div className="flex items-center font-sans">
                                                     <button className="text-xl" onClick={handleMinus}>-</button>
-                                                    <input type="text" className="w-8 h-6 border text-center bg-transparent text-xs" onChange={setInputValue} value={inputValue}/>
+                                                    <input type="text" className="w-8 h-6 border text-center bg-transparent text-xs" onChange={setInputValue} value={inputValue} />
                                                     <button className="text-lg" onClick={handlePlus}>+</button>
                                                 </div>
                                             </th>
@@ -91,7 +91,7 @@ const Cart = () => {
 
 
                         {/* price total */}
-                        <div className="w-[25%] h-56 mt-6">
+                        <div className="lg:w-[25%] h-56 mt-6">
                             <h1 className="font-medium uppercase px-4">Cart Totals</h1>
                             <div className="border mt-2 space-y-2 px-4 py-2">
                                 <h2 className="flex justify-between">Items: <span className="font-sans">{cart.length}</span></h2>

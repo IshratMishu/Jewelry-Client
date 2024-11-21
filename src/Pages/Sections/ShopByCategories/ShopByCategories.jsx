@@ -16,7 +16,7 @@ const ShopByCategories = () => {
             <p className='text-center font-medium text-2xl'>Shop by Categories</p>
             <p className='text-center pb-2 text-[--secondary-color]'>──────</p>
 
-            <div className="flex justify-around mt-5 cursor-pointer">
+            <div className="grid lg:grid-cols-8 md:grid-cols-4 grid-cols-2 gap-5 mt-5 cursor-pointer">
                 <Link to="/product-category/Rings">
                     <div className="flex flex-col items-center group">
                         <div className="group-hover:bg-[--primary-color] h-32 w-28 border border-[--secondary-color] group-hover:border-transparent bg-transparent transition-all duration-300">

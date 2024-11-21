@@ -1,23 +1,22 @@
 import Logo from "../../Components/Logo/Logo";
 import { useState } from "react";
 import { allDistricts } from "../../../public/District";
-import { TfiAngleDown } from "react-icons/tfi";
+import { TfiAngleDown} from "react-icons/tfi";
 import { IoSearchOutline } from "react-icons/io5";
+
 
 const Nav1 = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenEn, setIsOpenEn] = useState(false);
     const [isOpenUsd, setIsOpenUsd] = useState(false);
-
-    const [selectedValue, setSelectedValue] = useState("Select Location")
+    const [selectedValue, setSelectedValue] = useState("Select Location");
 
 
     return (
-        <div className="flex items-center justify-between">
+        <div className="lg:flex items-center justify-between hidden">
             <div>
                 <Logo></Logo>
             </div>
-
             <div className="flex items-center gap-2">
                 {/* select location */}
                 <div className="relative z-50">

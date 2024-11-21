@@ -23,8 +23,10 @@ const PaymentHistory = () => {
             </Helmet>
             <h1 className="text-2xl font-medium">MY ACCOUNT</h1>
             <div className="flex mt-8 gap-10">
-                <Sidebar></Sidebar>
-                <div className="pl-10 w-[75%]">
+                <div className="hidden md:block">
+                    <Sidebar></Sidebar>
+                </div>
+                <div className="md:pl-10 md:w-[75%] w-full">
                     <h2 className="text-xl font-sans pb-4 text-end">Total Payments: {payments.length}</h2>
                     <div className="overflow-x-auto">
                         <table className="w-full">

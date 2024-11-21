@@ -58,7 +58,7 @@ const SignUp = () => {
                         axiosPublic.post("/users", userInfo).then((res) => {
                             if (res.data?.insertedId) {
                                 toast.success("Sign Up Success");
-                                if (userInfo.role === "seller") {
+                                if (userInfo.role === "Seller") {
                                     navigate('/dashboard/sellerHome');
                                 } else {
                                     navigate(from);
@@ -81,7 +81,7 @@ const SignUp = () => {
                 <p className="text-center pb-6">Please fill in the information below:</p>
                 <form className="flex w-full flex-col items-center justify-center gap-4" onSubmit={handleSubmit(onSubmit)}>
                     <input
-                        className="border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none w-2/5"
+                        className="border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none lg:w-2/5 md:w-1/2 w-full"
                         type="name"
                         placeholder="Username"
                         name="name"
@@ -90,7 +90,7 @@ const SignUp = () => {
                     {errors.name && <span className="text-red-700">This field is required</span>}
 
                     <input
-                        className="border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none w-2/5"
+                        className="border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none lg:w-2/5 md:w-1/2 w-full"
                         type="email"
                         placeholder="Email"
                         name="email"
@@ -98,13 +98,13 @@ const SignUp = () => {
                     />
                     {errors.email && <span className="text-red-700">This field is required</span>}
 
-                    <div className="w-2/5">
+                    <div className="lg:w-2/5 md:w-1/2 w-full">
                         <input type="file" name="" {...register("photo", { required: true })} className="border border-[--secondary-color] w-full py-2 pl-4" />
                     </div>
                     {errors.photo && <span className="text-red-700">This field is required</span>}
 
 
-                    <div className="w-2/5 border border-[--secondary-color] py-2 pl-4 flex justify-between">
+                    <div className="lg:w-2/5 md:w-1/2 w-full border border-[--secondary-color] py-2 pl-4 flex justify-between">
                         <span>Select Your Role</span>
                         <div className="flex gap-5 pr-4">
                             <label className="cursor-pointer flex">
@@ -120,7 +120,7 @@ const SignUp = () => {
                     </div>
                     {errors.roll && <span className="text-red-700">This field is required</span>}
 
-                    <div className="relative w-2/5 border border-[--secondary-color]">
+                    <div className="relative lg:w-2/5 md:w-1/2 w-full border border-[--secondary-color]">
                         <input
                             className="bg-transparent py-2 pl-4 focus:outline-none"
                             type={showPassword ? "text" : "password"}
@@ -140,7 +140,7 @@ const SignUp = () => {
                     </div>
 
 
-                    <button className="border border-[--secondary-color] md:px-8 px-4 py-2 bg-[--secondary-color] text-white hover:bg-transparent hover:text-[var(--secondary-color)] w-2/5 mt-3"><span className="flex items-center gap-2 justify-center">SIGN UP<MdOutlineArrowRightAlt /></span></button>
+                    <button className="border border-[--secondary-color] md:px-8 px-4 py-2 bg-[--secondary-color] text-white hover:bg-transparent hover:text-[var(--secondary-color)] lg:w-2/5 md:w-1/2 w-full mt-3"><span className="flex items-center gap-2 justify-center">SIGN UP<MdOutlineArrowRightAlt /></span></button>
                     <h1 className="text-[14px] text-gray-400 flex gap-1">
                         Already have an account ? <Link to='/signIn'><p className="text-[--secondary-color] hover:underline">Sign in here</p></Link>
                     </h1>

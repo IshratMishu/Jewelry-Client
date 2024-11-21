@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 
 const FooterLast = () => {
     return (
-        <div className="bg-[--primary-color] h-72 mt-28">
+        <div className="bg-[--primary-color] h-72 lg:mt-28 mt-20">
             <div className="flex items-center justify-between">
                 <div>
-                    <img src={img1} alt="" className="h-72" />
+                    <img src={img1} alt="" className="h-72 md:block hidden" />
                 </div>
                 <div className="text-center ">
                     <h1 className="text-2xl font-semibold pb-2">Become a Seller</h1>
                     <p>Do you want to sell your products?</p>
-                   <Link to='/signUp'><button className="bg-[--secondary-color] px-6 py-1 text-white font-medium hover:bg-transparent hover:text-black border border-[--secondary-color] mt-6">Join Us</button></Link>
+                    <Link to='/signUp'><button className="bg-[--secondary-color] px-6 py-1 text-white font-medium hover:bg-transparent hover:text-black border border-[--secondary-color] mt-6">Join Us</button></Link>
                 </div>
 
                 <div>

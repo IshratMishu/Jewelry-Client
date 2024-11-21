@@ -12,7 +12,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 const SignIn = () => {
     const { signInUser, googleLogin } = useAuth();
     const [credentials, setCredentials] = useState("");
-const axiosPublic = useAxiosPublic();
+    const axiosPublic = useAxiosPublic();
 
     // hook form
     const {
@@ -31,23 +31,23 @@ const axiosPublic = useAxiosPublic();
     const handleSocialLogin = socialLoginProvider => {
         socialLoginProvider()
             .then(result => {
-                const userInfo ={
+                const userInfo = {
                     email: result.user?.email,
                     name: result.user?.displayName,
                     photo: result.user?.photoURL,
                     role: 'User'
                 }
                 axiosPublic.post('/users', userInfo)
-                .then(res=>{
-                    if (res.data?.insertedId || res.data?.message === "user already exists"){
-                        toast.success("Login Success!");
-                        navigate(from);
-                    }
-                })
+                    .then(res => {
+                        if (res.data?.insertedId || res.data?.message === "user already exists") {
+                            toast.success("Login Success!");
+                            navigate(from);
+                        }
+                    })
             });
     }
 
- 
+
 
 
     // Function to handle form submission
@@ -77,7 +77,7 @@ const axiosPublic = useAxiosPublic();
                 <p className="text-center pb-6">Please enter your e-mail and password:</p>
                 <form className="flex w-full flex-col items-center justify-center gap-4" onSubmit={handleSubmit(onLogin)}>
                     <input
-                        className="border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none w-2/5"
+                        className="border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none md:w-2/5 w-full"
                         type="email"
                         placeholder="Email"
                         name="email"
@@ -86,7 +86,7 @@ const axiosPublic = useAxiosPublic();
                     {errors.email && <span className="text-red-700">This field is required</span>}
 
                     <input
-                        className="w-2/5 border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none"
+                        className="md:w-2/5 w-full border border-[--secondary-color] bg-transparent py-2 pl-4 focus:outline-none"
                         type="password"
                         placeholder="Password"
                         name="password"
@@ -94,10 +94,10 @@ const axiosPublic = useAxiosPublic();
                     />
                     {errors.password && <span className="text-red-700">This field is required</span>}
 
-                    <button onClick={() => handleSocialLogin} className="border border-[--secondary-color] md:px-8 px-4 py-2 bg-[--secondary-color] text-white hover:bg-transparent hover:text-[var(--secondary-color)] w-2/5 mt-3"><span className="flex items-center gap-2 justify-center">SIGN IN<MdOutlineArrowRightAlt /></span></button>
+                    <button onClick={() => handleSocialLogin} className="border border-[--secondary-color] md:px-8 px-4 py-2 bg-[--secondary-color] text-white hover:bg-transparent hover:text-[var(--secondary-color)] w-full md:w-2/5 mt-3"><span className="flex items-center gap-2 justify-center">SIGN IN<MdOutlineArrowRightAlt /></span></button>
                     {
-                    credentials && <small className="text-red-700">{credentials}</small>
-                }
+                        credentials && <small className="text-red-700">{credentials}</small>
+                    }
 
                     <h1 className="text-[14px] text-gray-400 flex gap-1">
                         Do not have an account ? <Link to='/signUp'><p className="text-[--secondary-color] hover:underline">Create one</p></Link>

@@ -7,7 +7,7 @@ const useProducts = () => {
     // const [products, setProducts] = useState([]);
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/jewelries`)
+    //     fetch(`https://jewelry-shop-server-five.vercel.app/jewelries`)
     //         .then(res => res.json())
     //         .then(data => setProducts(data))
     // }, [])

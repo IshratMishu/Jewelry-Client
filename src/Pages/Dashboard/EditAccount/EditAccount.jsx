@@ -45,8 +45,10 @@ const EditAccount = () => {
             </Helmet>
             <h1 className="text-2xl font-medium">MY ACCOUNT</h1>
             <div className="flex mt-8 gap-10">
-                <Sidebar></Sidebar>
-                <form className="space-y-5 w-[70%] pl-10" onSubmit={handleSubmit}>
+                <div className="hidden md:block">
+                    <Sidebar></Sidebar>
+                </div>
+                <form className="space-y-5 w-full md:w-[70%] md:pl-10" onSubmit={handleSubmit}>
                     <div className="space-y-2">
                         <label className="text-sm">Name</label>
                         <input

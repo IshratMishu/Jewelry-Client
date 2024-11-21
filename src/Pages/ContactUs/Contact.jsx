@@ -11,14 +11,14 @@ const Contact = () => {
             <Helmet>
                 <title>Contact us - Moice Jewelry</title>
             </Helmet>
-            <div className="h-72 px-10">
+            <div className="h-72 md:px-10 px-2">
                 <Map height={288} defaultCenter={locationCoordinates} defaultZoom={11}>
                     <Marker width={50} anchor={locationCoordinates} />
                 </Map>
             </div>
 
-            <div className="flex items-center mt-10">
-                <div className="w-2/5 px-10">
+            <div className="flex md:flex-row flex-col items-center mt-10">
+                <div className="md:w-2/5 md:px-10 px-2">
                     <h1 className="text-2xl font-medium pb-4">Contact</h1>
                     <p>Our one-to-one support is a big part <br /> of Moice company. Contact us by<br /> phone or email to get help from our <br /> qualified team.</p>
                     <div className="pt-6">
@@ -30,8 +30,8 @@ const Contact = () => {
                         <p>contact@moice.com</p>
                     </div>
                 </div>
-                <div className="w-3/5 px-10">
-                    <h2 className="text-2xl font-medium pb-4">Write to us</h2>
+                <div className="md:w-3/5 md:px-10 px-2">
+                    <h2 className="text-2xl font-medium pb-4 md:pt-0 pt-5">Write to us</h2>
                     <form className="w-full space-y-6">
                         <input
                             className="h-10 w-full border px-3 py-2 text-sm focus:outline-none bg-[--third-color]"

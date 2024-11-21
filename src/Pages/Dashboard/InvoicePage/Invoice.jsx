@@ -44,9 +44,11 @@ const Invoice = () => {
             </Helmet>
             <h1 className="text-2xl font-medium">MY ACCOUNT</h1>
             <div className="flex mt-8 gap-10">
+            <div className="hidden md:block">
                 <Sidebar></Sidebar>
+                </div>
 
-                <div className="mx-auto border w-[70%] p-4 min-h-screen" id="invoice-content" >
+                <div className="mx-auto border w-full md:w-[70%] p-4 min-h-screen" id="invoice-content" >
                     <div className="flex justify-between items-center">
                         <Logo></Logo>
                         <h1 className="bg-[--secondary-color] text-white px-2 py-1">INVOICE</h1>

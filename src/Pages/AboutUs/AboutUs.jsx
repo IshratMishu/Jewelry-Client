@@ -16,7 +16,7 @@ const AboutUs = () => {
             </Helmet>
             <h1 className='text-xl font-medium pb-5'>ABOUT US</h1>
             <p>Welcome to our online jewelry store! We are a team of passionate jewelers who strive to bring the best and most exquisite pieces to our customers. Our journey began with a simple idea: to create a space where everyone can find something special to cherish and wear every day.We believe that jewelry is not just an accessory, but an extension of one’s personality and individuality. Our collection is carefully curated to reflect this belief, with each piece being handpicked for its timeless elegance and unparalleled quality.</p>
-            <div className="flex items-center gap-5 justify-center pt-10 pb-10">
+            <div className="flex md:flex-row flex-col items-center gap-5 justify-center pt-10 pb-10">
                 <div>
                     <img src={about1} alt="" className='w-[450px] h-[500px] object-cover' />
                 </div>
@@ -37,15 +37,15 @@ const AboutUs = () => {
                 At Moice Jewelry, we believe that jewelry is more than just an accessory; it’s a form of self-expression and a way to celebrate life’s precious moments. Our mission is to provide our customers with beautiful, high-quality pieces that they can cherish for a lifetime. We are proud to be a part of your journey, offering not only stunning jewelry but also exceptional service and a personalized shopping experience. Join us in celebrating the art of fine jewelry and discover the perfect piece that resonates with your unique style and story.</p>
 
 
-            <div className='flex items-center justify-center gap-5 mt-20'>
-                <div className='text-end'>
+            <div className='flex md:flex-row flex-col items-center justify-center gap-5 mt-20'>
+                <div className='text-end md:p-0 p-5'>
                     <p className='tracking-widest text-xs'><Fade cascade>Excellence</Fade></p>
-                    <h4 className='text-xl font-medium'><Fade direction='right'>WHY CHOOSE US? </Fade></h4>
-                    <p className='text-sm '> 
+                    <h4 className='text-xl font-medium overflow-hidden'><Fade direction='right'>WHY CHOOSE US? </Fade></h4>
+                    <p className='text-sm'>
                         Choose our jewelry store for exceptional quality <br /> and customer service. With a stunning collection <br /> of fine jewelry, fast and free shipping, and expert <br />customer support, you can shop with confidence. <br /> Experience the beauty and elegance of fine <br /> jewelry with unmatched quality and service.
-                   </p>
+                    </p>
                 </div>
-                <img src={about6} alt="" className='w-80 mr-5' />
+                <img src={about6} alt="" className='md:w-80 w-64 md:mr-5' />
             </div>
 
             <Reviews></Reviews>
