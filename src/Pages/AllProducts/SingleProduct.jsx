@@ -42,13 +42,14 @@ const SingleProduct = ({ product }) => {
 
                     <IoMdHeartEmpty onClick={() => handleWishlist(product)} className="hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 cursor-pointer" />
 
+
                     <div className="mx-auto w-fit">
-                        <PiEyes onClick={() => setOpenModal(true)} className="hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 cursor-pointer" />
+                        <PiEyes onClick={() => setOpenModal(true)} className="hover:bg-[--secondary-color] hover:text-white rounded-full text-2xl p-1 cursor-pointer" />
 
                         <div onClick={() => setOpenModal(false)} className={`fixed z-50 ${openModal ? 'visible opacity-100' : 'invisible opacity-0'} inset-0 grid place-items-center bg-black/20 backdrop-blur-sm duration-100`}>
                             <div onClick={(e_) => e_.stopPropagation()} className={`absolute bg-[--third-color] md:w-auto w-72 p-6 drop-shadow-lg ${openModal ? 'opacity-1 duration-300' : 'scale-110 opacity-0 duration-150'}`}>
                                 <RxCross2 onClick={() => setOpenModal(false)} className="absolute right-3 top-3 w-6 cursor-pointer" />
-                                <div className="lex md:flex-row flex-col md:gap-16 p-4">
+                                <div className="flex md:flex-row flex-col md:gap-16 p-4">
                                     <div>
                                         <InnerImageZoom src={image}
                                             alt="Product Image"
@@ -77,6 +78,8 @@ const SingleProduct = ({ product }) => {
                             </div>
                         </div>
                     </div>
+
+
                     <MdOutlineShoppingCart onClick={() => handleCart(product)} className="hover:bg-[--secondary-color] hover:text-white rounded-full text-3xl p-1 cursor-pointer" />
                 </div>
             </div>
